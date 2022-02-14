@@ -78,5 +78,77 @@ public class Glava2 {
         System.out.println(" **** ");
         System.out.println("******");
     }
-
+    public static void zadanie_2_13() {
+        // Упрощенный вариант для реализации взята задача 1.4
+        // задача 1.5 и задача 1.7
+        int a = 5;
+        int b = 9;
+        int c = a+b;
+        System.out.println("Переменная а: "+a+" Переменная b: "+b);
+        System.out.println("Сумма значений а и b: "+c);
+        double x = 7.5;
+        double dubleX = x*2;
+        double triplX = x*3;
+        System.out.println("Значение Х: "+x);
+        System.out.println("Значение Х в квадрате: "+dubleX);
+        System.out.println("Значение Х в кубе: "+triplX);
+        int z = 7;
+        double y =(double) z/3;
+        System.out.println("Значение переменной z:"+z+
+                "1/3 часть от z состовляет:"+y);
+    }
+    public static void zadanie_2_14(){
+        int x = reader.nextInt();
+        System.out.println(x+10);
+    }
+    public static void zadanie_2_15(){
+        int x = reader.nextInt();
+        System.out.println(x*10);
+    }
+    public static void zadanie_2_16(){
+        int x = reader.nextInt();
+        System.out.println(x+6);
+        System.out.println(x-12);
+    }
+    public static void zadanie_2_17(){
+        int x = reader.nextInt();
+        int dubleX = x*x;
+        System.out.println(x+"В квадрате: "+dubleX);
+    }
+    public static void zadanie_2_18(){
+        int x = reader.nextInt();
+        int dubleX = x*x;
+        int triplX = x*x*x;
+        System.out.println(x+"В квадрате: "+dubleX+"&"+triplX+" :в кубе");
+    }
+    public static void zadanie_2_19(){
+        int x = reader.nextInt();
+        int y = x-1;
+        int z= x+1;
+        System.out.println(y+" "+x+" "+z);
+    }
+    public static void zadanie_2_20(){
+        int x = reader.nextInt();
+        System.out.println("Первое число__"+x);
+        System.out.println("Второе число__"+(-x));
+    }
+    public static void zadanie_2_21(){
+        int x = reader.nextInt();
+        int a = x+1;
+        int b = x+2;
+        int c = x+3;
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+    }
+    public static void zadanie_2_22(){
+        System.out.println("Введите первое число__");
+        int x = reader.nextInt();
+        System.out.println("Введите второе число__");
+        int y = reader.nextInt();
+        System.out.println("Сумма двух чисел__"+(x+y));
+        System.out.println("Произведение двух чисел__"+(x*y));
+        System.out.println("");
+        System.out.println("");
+    }
 }
