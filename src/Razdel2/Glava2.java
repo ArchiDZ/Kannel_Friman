@@ -3,6 +3,7 @@ package Razdel2;
 /*
 * Задания из главы 2 с Задание 2.1 по Задание 2.4*/
 
+import java.security.PublicKey;
 import java.util.Scanner;
 
 public class Glava2 {
@@ -148,7 +149,48 @@ public class Glava2 {
         int y = reader.nextInt();
         System.out.println("Сумма двух чисел__"+(x+y));
         System.out.println("Произведение двух чисел__"+(x*y));
-        System.out.println("");
-        System.out.println("");
+        System.out.println("Разница между первым и вторым числом-->"+(x-y));
+        System.out.println("Разница между вторым и первым числом-->"+(y-x));
+    }
+    public static void zadanie_2_23(){
+        System.out.print("Введите первое число-->");
+        int x = reader.nextInt();
+        System.out.print("Введите вторе число--> ");
+        int y = reader.nextInt();
+        int dubleX = x*x;
+        int dubleY = y*y;
+        int summ = dubleX+dubleY;
+        System.out.println("Квадрат первого числа-->"+dubleX);
+        System.out.println("Квадрат второго числа-->"+dubleY);
+        System.out.println("Сумма квадратов-->"+summ);
+    }
+    public static void zadanie_2_24(){
+        System.out.print("Введите размер первой стороны прямоугольника-->");
+        int storona1 = reader.nextInt();
+        System.out.print("Введите размер второй стороны прямоугольника-->");
+        int storona2 = reader.nextInt();
+        System.out.println("Периметр прямоугольника равен-->"+((storona1+storona2)*2));
+        System.out.println("Площадь прямоугольника ровна-->"+(storona1*storona2));
+    }
+    public static void zadanie_2_25(){
+        System.out.print("Введите длинну параллелепипеда-->");
+        int dlina = reader.nextInt();
+        System.out.print("Введите ширину параллелепипеда-->");
+        int shirina = reader.nextInt();
+        System.out.print("Введите высоту параллелепипеда-->");
+        int visota = reader.nextInt();
+        int perimetrOsn = (dlina+shirina)*2;
+        int perimetrLZ = (visota+shirina)*2;
+        int perimetrBok = (visota+dlina)*2;
+        int ploshadOsnovania = shirina*dlina;
+        int ploshadBokPoverhnosti = perimetrOsn*visota;
+        int ploshadpolnPoverhnosti = ploshadBokPoverhnosti+2*ploshadOsnovania;
+        int objom = dlina*visota*shirina;
+        System.out.println("Плошадь основания-->"+ploshadOsnovania);
+        System.out.println("Площадь боковой Поверхности-->"+ploshadBokPoverhnosti);
+        System.out.println("Полная площадь-->"+ploshadpolnPoverhnosti);
+        System.out.println("Обьем-->"+objom);
+
+
     }
 }
