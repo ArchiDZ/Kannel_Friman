@@ -190,7 +190,26 @@ public class Glava2 {
         System.out.println("Площадь боковой Поверхности-->"+ploshadBokPoverhnosti);
         System.out.println("Полная площадь-->"+ploshadpolnPoverhnosti);
         System.out.println("Обьем-->"+objom);
-
-
+    }
+    public  static void zadanie_2_26(){
+        System.out.println("Введите год рождения");
+        int yearB = reader.nextInt();
+        System.out.println("Введите текущий год");
+        int todayYear = reader.nextInt();
+        System.out.println("Возраст -->"+(todayYear-yearB));
+    }
+    public static void zadanie_2_27(){
+        System.out.println("Введите массу тела в граммах");
+        int gramm = reader.nextInt();
+        int kg = gramm*1000;
+        System.out.println("Масса тела в кг-->"+kg);
+    }
+    public static void zadanie_2_28(){
+        System.out.print("Введите расстояние в кабельтовых: ");
+        int kab = reader.nextInt();
+        double metr = kab*185.2;
+        double km = metr/1000;
+        System.out.println(kab+" кабельтов равно "+metr+" метров, соответственно " +
+                "это равно "+km+" километров");
     }
 }
