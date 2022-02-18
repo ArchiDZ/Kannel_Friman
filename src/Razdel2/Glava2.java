@@ -212,4 +212,96 @@ public class Glava2 {
         System.out.println(kab+" кабельтов равно "+metr+" метров, соответственно " +
                 "это равно "+km+" километров");
     }
+    public static void zadanie_2_29(){
+        System.out.print("Введите время в минутах-->");
+        int time = reader.nextInt();
+        int sec_time = time*60;
+        System.out.println(time+" минут это -->"+sec_time+" секунд");
+    }
+    public static void zadanie_2_30(){
+        System.out.println("Сколько сейчас времени?");
+        System.out.print("Сейчас ");
+        int hours = reader.nextInt();
+        System.out.print(" часов и ");
+        int min = reader.nextInt();
+        System.out.print(" минут");
+        int min_time = (hours*60)+min;
+        int sec_time = min_time*60;
+        System.out.println("После полуночи прошло "+min_time+" минут");
+        System.out.println("После полуночи прошло "+sec_time+" секунд");
+        System.out.println("До полуночи осталось "+(1440-min_time)+" минут");
+    }
+    public static void zadanie_2_31(){
+        System.out.println("Расчет кинетической энергии тела");
+        System.out.print("Введите массу тела-->");
+        int massa = reader.nextInt();
+        System.out.println("");
+        System.out.print("Введите скорость тела-->");
+        int speed = reader.nextInt();
+        int keenetic = (massa*(speed*speed))/2;
+        System.out.println("Кинетическая энергия тела состовляет--> "+keenetic);
+    }
+    public static void zadanie_2_32(){
+        System.out.print("Введите число-->");
+        int num = reader.nextInt();
+        System.out.println("Обратное значение-->"+(-num));
+    }
+    public static void zadanie_2_33(){
+        System.out.println("Расчет площади трапеции");
+        System.out.print("Введите основание 1-->");
+        double osn1 = reader.nextDouble();
+        System.out.println(" ");
+        System.out.print("Введите основание 2-->");
+        double osn2 = reader.nextDouble();
+        System.out.print("Введите высоту трапеции-->");
+        double visota = reader.nextDouble();
+        double plosh = 0.5*(osn1+osn2)*visota;
+        System.out.println("Площадь трапеции-->"+plosh);
+    }
+    public static void zadanie_2_34(){
+        System.out.println("Как вас зовут?");
+        String name = reader.nextLine();
+        System.out.println("Привет, "+name);
+    }
+    public static void zadanie_2_35(){
+        System.out.println("Как вас зовут?");
+        String name = reader.nextLine();
+        String surname = reader.nextLine();
+        System.out.println("Вас зовут "+name+" "+surname);
+    }
+    public static void zadanie_2_36(){
+        System.out.print("Введите вашу фамилию-->");
+        String surname = reader.nextLine();
+        System.out.println();
+        System.out.print("Введите куда вы хотите отправиться-->");
+        String location = reader.nextLine();
+        System.out.println("Пассажир "+surname+" вылетает в "+location);
+    }
+    public static void zadanie_2_37(){
+        System.out.println("Как вас зовут?");
+        String name = reader.nextLine();
+        String surname = reader.nextLine();
+        System.out.println(name+" "+surname);
+        System.out.println(surname+" "+name);
+    }
+    public static void zadanie_2_38(){
+        System.out.println("Введите ваше Имя");
+        String name = reader.nextLine();
+        System.out.println("Введите вашу Фамилию");
+        String surname = reader.nextLine();
+        System.out.println("Введите ваше Отчество");
+        String fname = reader.nextLine();
+        System.out.println(surname+" "+name.charAt(0)+fname.charAt(0));
+    }
+    public static void zadanie_2_39(){
+        System.out.println("Введите ваше Имя");
+        String name = reader.nextLine();
+        System.out.println("Введите вашу Фамилию");
+        String surname = reader.nextLine();
+        System.out.println("Введите ваше Отчество");
+        String fname = reader.nextLine();
+        System.out.println(name.charAt(0)+"."+fname.charAt(0)+"."+surname);
+    }
+
+
 }

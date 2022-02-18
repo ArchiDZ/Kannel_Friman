@@ -5,6 +5,6 @@ public class Main {
 
     public static void main(String[]args){
 
-        Glava2.zadanie_2_28();
+        Glava2.zadanie_2_39();
     }
 }
