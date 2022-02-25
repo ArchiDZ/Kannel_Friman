@@ -49,14 +49,51 @@ public class Glava5 {
         * Значение хотя бы не больше 120
         * Значение одной переменной равно сумме значений двух других переменных */
     }
-    public static void zadanie_5_3(){}
+    public static void zadanie_5_3(){
+        /*
+        * Словестное описание логических условий
+        * */
+        String [] s1 = {"Equal=(x==t)",
+                "proverka=(a==b && t==z)",
+                "check = num1>num2;",
+                "result = ((a+b)>100)",
+                "ok = ((a+b10-100)!=0)"
+        };
+
+    }
     public static void zadanie_5_4(){
         double x = -2;
         double y = 5;
         double z = 13;
-
-
-        boolean que1 = ((z>x)||(x<0));
-        boolean que = que1&&(z-y-9);
+        boolean a = z>x;
+        boolean b = x<0;
+        boolean result = a||b;
+        boolean a1 = z-y>9;
+        System.out.println("-->"+result);
+        System.out.println(result&&a1);
+    }
+    public static void zadanie_5_5(){
+        int x = -2;
+        int y = 5;
+        int z = 13;
+        boolean a = z>x;
+        boolean b = x<0;
+        boolean result = a||b;
+        boolean a1 = z-y>9;
+        System.out.println("z>x-->"+a);
+        System.out.println("x<0-->"+b);
+        System.out.println("-----------------");
+        System.out.println(result);
+        System.out.println(result&&a1);
+    }
+    public static void zadanie_5_6(){
+        int a = rnd.nextInt(100)+1;
+        int b = rnd.nextInt(100)+1;
+        System.out.println("a-->"+a+" b-->"+b);
+        if((a<b)||(a<100))
+            System.out.println("TRUE");
+        else
+            System.out.println("FALSE");
+        /*при переменной а=100 и b=5 значение FALSE*/
     }
 }
