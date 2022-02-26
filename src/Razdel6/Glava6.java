@@ -59,5 +59,118 @@ public class Glava6 {
          }else
              System.out.println("Введеное число отрицательное или равно 0");
      }
+     public static void zadanie_6_5(){
+         System.out.print("Введите целое число-->");
+         int num = input.nextInt();
+         if(num==0){
+             System.out.println("Ноль");
+         }
+     }
+     public static void zadanie_6_6(){
+         System.out.print("Введите число--> ");
+         int num = input.nextInt();
+         if(num>0)
+             System.out.println("Число положительное");
+         if (num<0)
+             System.out.println("Число отрицательное");
+         if (num == 0)
+             System.out.println("Ноль");
+     }
+     public static void zadanie_6_7(){
+         int num = input.nextInt();
+         if(num>99)
+             num--;
+         System.out.println(num);
+     }
+     public static void zadanie_6_8(){
+         System.out.println(" Введите 2 числа");
+         System.out.print(" Первое число-->\n");
+         int num1 = input.nextInt();
+         System.out.print("Второе число-->");
+         int num2 = input.nextInt();
+         if(num1>num2){
+             num1+=num2;
+             System.out.println(num1);
+         }
+         if(num1<num2){
+             num2*=num1;
+             System.out.println(num2);
+         }
+         if(num1 == num2)
+             System.out.println("Числа равны");
+     }
+     public static void zadanie_6_9(){
+         System.out.print("Введите трехзначное число-->");
+         int num = input.nextInt();
+         if (num>99){
+             int number1 = num/100;
+             int number2 = (num%100)/10;
+             int number3 = num%10;
+             if (number1%2==0)
+                 if(number2%2==0)
+                     if (number3%2==0)
+                         System.out.println("Четно-Красивое число");
+                     else System.out.println("Не является четно красивым числом");
+         }if(num>999)
+             System.out.println("Число слишком большое");
+     }
+     public static void zadanie_6_10(){
+         System.out.print("Введите двухзначное число-->");
+         int num = input.nextInt();
+         if(num>99){
+             System.out.println("Число не двухзначное");
+         }
+         if(num<=0){
+             System.out.println("Число отрицательное или равно нулю");
+         }
+         int number1 = num/10;
+         int number2 = num%10;
+         System.out.println(number1+" "+number2);
+         int result = number1*number2;
+         if (num>result){
+             System.out.println("Введеное число больше чем произведения цифр числа");
+         }else
+             System.out.println("Произведение больше числа");
+     }
+     public static void zadanie_6_11(){}// Условия задачи не совсем понятны.
+                                        // Что конкретно требуется
+    public static void zadanie_6_12(){
+         System.out.println("Определение есть ли у уровнения хотябы 1 корень");
+         System.out.println("Введите 3 числа");
+         System.out.print("Первое число-->");
+         int a = input.nextInt();
+         System.out.println();
+         System.out.print("Второе число-->");
+         int b = input.nextInt();
+         System.out.println();
+         System.out.print("Третье число-->");
+         int c = input.nextInt();
+         int d = b*b-4*a*c;
+         if (d<0)
+             System.out.println("Да");
+         else
+             System.out.println("Нет");
+    }
+    public static void zadanie_6_13(){
+         System.out.println("проверка дроби");
+         System.out.println("Введите числитель");
+         int chisl = input.nextInt();
+         System.out.println("Введите знаменатель");
+         int znam = input.nextInt();
+         if(chisl<znam)
+             System.out.println("Правильная дробь");
+         else
+             System.out.println("Дробь не правильная");
+    }
+    public static void zadanie_6_14(){
+        System.out.println("Введите числитель");
+        int chisl = input.nextInt();
+        System.out.println("Введите знаменатель");
+        int znam = input.nextInt();
+        if(chisl*znam>0)
+            System.out.println("Положительная");
+        else
+            System.out.println("Отрицательная");
+    }
 
 }

@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[]args){
 
-        Glava6.zadanie_6_4();
+        Glava6.zadanie_6_12();
     /*
         System.getProperties().list(System.out);
         System.out.println(System.getProperty("user.name"));
