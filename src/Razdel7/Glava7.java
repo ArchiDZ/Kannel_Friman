@@ -92,6 +92,85 @@ public static void zadanie_7_3(){
 public static void mod_zadanie_7_3(){
         int [] a = {2,4,9,4,3,6};
         int [] b = {6,4,2,9,9,0};
-
+}
+public static void zadanie_7_4(){
+        int x = rnd.nextInt(100-1);
+        System.out.println("Значение Х-->"+x);
+        int a = x%100;
+        if (x==a){
+            System.out.println("OK");
+        }else System.out.println("NOT OK");
+}
+public static void zadanie_7_5(){
+    int x = rnd.nextInt(100-1);
+    System.out.println("Значение Х-->"+x);
+    if (x>0){
+        System.out.println("Положительное");
+    }else System.out.println("Отрицательное");
+}
+public static void zadanie_7_6(){
+        int x = rnd.nextInt(1000-1);
+        int y = rnd.nextInt(1000-1);
+        System.out.println("x-->"+x+"--y-->"+y);
+        if(x==y){
+            System.out.println("Значения равны");
+        }
+        if (x>y){
+            System.out.println("Значение Х больше");
+        }else System.out.println("Значение Х меньше");
+}
+public static void zadanie_7_7(){
+        int peopple= rnd.nextInt(100-1);
+        int chears = rnd.nextInt(100-1);
+    System.out.println("Человек-->"+peopple+"--стульев-->"+chears);
+    if(peopple==chears){
+        System.out.println("В помещении одинакое количество стульев м людей");
+    }
+    if (peopple>chears){
+        System.out.println("Людей больше чем стульев, мест не хватает");
+    }else System.out.println("Стульев больше чем людей,мест хватит");
+}
+public static void zadanie_7_8(){
+    int peopple= rnd.nextInt(100-1);
+    int tables = rnd.nextInt(100-1);
+    System.out.println("Человек-->"+peopple+"--столов-->"+tables);
+    if(peopple==tables){
+        System.out.println("В помещении одинакое количество стульев м людей");
+    }
+    if (peopple<=tables*2){
+        System.out.println("Места хватит");
+    }else System.out.println("Места не хватает");
+}
+public static void zadanie_7_9(){
+    int x = rnd.nextInt(1000-1);
+    if (x>0)
+        System.out.println("OK");
+    int y = rnd.nextInt(1000-1);
+    if (y>0)
+        System.out.println("OK");
+    int z = rnd.nextInt(1000-1);
+    if (z>0)
+        System.out.println("OK");
+}
+public static void zadanie_7_10(){
+        System.out.println("Введите число для проверки");
+        int num = input.nextInt();
+        if(num<0)
+            System.out.println("Число отрицательное.Не пойдет.Меняем на -->"+(-num));
+        else System.out.println("Число положительное,поехали дальше");
+}
+public static void zadanie_7_11(){
+        System.out.println("Введите два разных числа");
+        System.out.print("Число 1-->");
+        int num1 = input.nextInt();
+        System.out.println("Число 2-->");
+        int num2 = input.nextInt();
+        if (num1>num2){
+            System.out.println("По возрастанию-->"+num2+" "+num1);
+            System.out.println("По убванию-->"+num1+" "+num2);
+        }else {
+            System.out.println("По возрастанию-->" + num1 + " " + num2);
+            System.out.println("По убванию-->" + num2 + " " + num1);
+        }
 }
 }
