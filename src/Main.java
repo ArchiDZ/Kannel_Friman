@@ -4,12 +4,13 @@ import Razdel3.Glava3;
 import Razdel4.Glava4;
 import Razdel5.Glava5;
 import Razdel6.Glava6;
+import Razdel7.Glava7;
 
 public class Main {
 
     public static void main(String[]args){
 
-        Glava6.zadanie_6_12();
+        Glava7.zadanie_7_3();
     /*
         System.getProperties().list(System.out);
         System.out.println(System.getProperty("user.name"));
