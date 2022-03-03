@@ -78,11 +78,25 @@ public class Glava8 {
      */
     }
     public static void zadanie_8_5(){
-        int x = rnd.nextInt(150 - 1);
-        int a = rnd.nextInt(150 - 1);
+        int x = rnd.nextInt(1500 - 1);
+        int a = rnd.nextInt(1500 - 1);
 
         if (x>0){
             System.out.println("Плюс");
         }else System.out.println("Не плюс");
+        if (x>a){
+            a=-1;
+            System.out.println("-->"+a);
+        }else {a=0; System.out.println("-->"+a);}
+        if (a>100){System.out.println("Верное число");}
+        else System.out.println("Ошибка");
+        if (a!=x){
+            a=x;
+            System.out.println("=->"+a);
+        }else {System.out.println("=->"+(x=a*2));}
+        if(x>0){
+            x+=1;
+            System.out.println("==>"+x);
+        }else{x-=1; System.out.println("==>"+x);}
     }
 }
