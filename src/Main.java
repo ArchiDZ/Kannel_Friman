@@ -11,18 +11,18 @@ public class Main {
 
     public static void main(String[]args){
 
-        //Glava8.zadanie_8_7();
-        Glava8 a = new Glava8();
-        Glava8 b = new Glava8();
-        Glava8 c = new Glava8();
+        Glava8.zadanie_8_11();
+       // Glava8 a = new Glava8();
+      // Glava8 b = new Glava8();
+      //  Glava8 c = new Glava8();
 //        Glava8 d = new Glava8();
 //        Glava8 e = new Glava8();
 //        Glava8 f = new Glava8();
 //        Glava8 g = new Glava8();
 //
-        a.zadanie_8_9(3000,0,0);
-        b.zadanie_8_9(239,0,0);
-        c.zadanie_8_9(7,0,0);
+      //  a.zadanie_8_9(3000,0,0);
+      //  b.zadanie_8_9(239,0,0);
+     //   c.zadanie_8_9(7,0,0);
 //        d.zadanie_8_6(6,12);
 //        e.zadanie_8_6(7,7);
 //        f.zadanie_8_6(14,14);

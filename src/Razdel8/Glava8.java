@@ -168,6 +168,30 @@ public void zadanie_8_9(int a, int b, int c){
             System.out.println(c-a-b);
         }
 
+
 }
+    public static void zadanie_8_10(){
+        int num = rnd.nextInt(250-0);
+        System.out.println("num-->"+num);
+        if(num>0){
+            num=num*num;
+            System.out.println("Квадрат числа-->"+num);
+        }else{
+            System.out.println("Ошибка!");
+        }
+    }
+    public static void zadanie_8_11(){
+        int people = rnd.nextInt(100-1);
+        int chers = rnd.nextInt(100-1);
+        int tmp;
+        if(people>chers){
+            tmp = people-chers;
+            System.out.println(tmp+" стульев Не хватает ");
+        }else{
+            tmp = chers-people;
+            System.out.println("Стульев больше чем людей на "+tmp);
+        }
+
+    }
 
 }
