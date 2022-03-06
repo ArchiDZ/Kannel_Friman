@@ -193,5 +193,149 @@ public void zadanie_8_9(int a, int b, int c){
         }
 
     }
+    public static void zadanie_8_12(){
+        System.out.println("Enter your mark");
+        int mark = in.nextInt();
+        if(mark>10){
+            System.out.println("Error, Mark cant be larger then 10");
+        }else System.out.println("Mark excepted");
+        if (mark<1){
+            System.out.println("Error, mark cant be less than 1");
+        }
+    }
+ public static void zadanie_8_13(){
+        System.out.print("Enter 2 symbol number-->");
+        int number = in.nextInt();
+        if(number>0){
+            System.out.println("Number Excepted");
+        }else {
+            System.out.println("Error! Number is not Valid");
+        }
+        int num1 = number/10;
+        int num2 = number%10;
+        System.out.println("Variable is consist from numbers-->"+num1+" -->"+num2);
+     if(num1==num2){
+         System.out.println("The numbers are equals");
+     }else {
+         System.out.println("The numbers are not equals");
+     }
+        if (num1>num2){
+            System.out.println("Number1 is bigger than Number2");
+        }
+        if(num2>num1){
+            System.out.println("Number2 is bigger than Number1");
+        }}
+     public static void zadanie_8_14(){
+         System.out.print("Enter 2 symbol number-->");
+         int number = in.nextInt();
+         if(number>0){
+             System.out.println("Number Excepted");
+         }else {
+             System.out.println("Error! Number is not Valid");
+         }
+         int num1 = number/10;
+         int num2 = number%10;
+         System.out.println("Variable is consist from numbers-->"+num1+" -->"+num2);
+         if(num1==num2){
+             System.out.println("The numbers are equals");
+         }
+         if (num1>num2){
+             System.out.println("Number1 is bigger than Number2");
+         }
+         if(num2>num1){
+             System.out.println("Number2 is bigger than Number1");
+         }
+ }
+ public static void zadanie_8_15(){
+     System.out.print("Enter 2 symbol number-->");
+     int number = in.nextInt();
+     if(number>0){
+         System.out.println("Number Excepted");
+     }else {
+         System.out.println("Error! Number is not Valid");
+     }
+     int num1 = number/10;
+     int num2 = number%10;
+     System.out.println("Variable is consist from numbers-->"+num1+" -->"+num2);
+     if(num1==num2){
+         System.out.println("The numbers are equals");
+     }
+     if (num1>num2){
+         System.out.println("Number1 is bigger than Number2");
+     }
+     if(num2>num1){
+         System.out.println("Number2 is bigger than Number1");
+     }
+ }
+ public static void zadanie_8_16(){
+        System.out.println("Трехзначное число является семитричным, если первая и последняя цифра одинаковая");
+        System.out.print("Введите трехзначное число-->");
+        int number = in.nextInt();
+        int num1 = number/100;
+        int num2 = number%10;
+        System.out.println("num1-->"+num1+"--num2-->"+num2);
+        if(num1==num2){
+            System.out.println("Поздравляю это семитричное число");
+        }else {
+            System.out.println("Это число не семитрично");
+        }
+ }
+    public static void zadanie_8_17(){
+        System.out.println("Дваждычетное число");
+        System.out.println("Введите трехзначное число");
+        int number = in.nextInt();
+        int num1 = number/100;
+        int num2 = (number/10)%10;
+        int num3 = number%10;
+        int summ = num1+num2+num3;
+        int check1 = number%2;
+        int check2 = summ%2;
+        System.out.println("-->"+num1+"-->"+num2+"-->"+num3);
+        if(check1==0){
+            System.out.println(" Первичное Число четное");
+        }else {System.out.println("Первичное число не четное");}
+        if (check2 == 0){
+            System.out.println("Вторичное число четное");
+        }else{System.out.println("Вторичное число не четное");}
+            if (check1==check2){
+                System.out.println("Вы нашли дваждычетное число!!!");
+            }else {System.out.println("Попробуйте еще раз...");}
+    }
+    public static void zadanie_8_18(){
+        System.out.println("Степень четности");
+        System.out.print("Введите трехзначное число-->");
+        int i = 0;
+        int number = in.nextInt();
+        int num1 = number/100;
+        int num2 = (number/10)%10;
+        int num3 = number%10;
+        System.out.println("Контроль чисел");
+        System.out.println(num1+"-->"+num2+"-->"+num3);
+        int check1 = num1%2;
+        int check2 = num2%2;
+        int check3 = num3%2;
+        System.out.println("Контроль чеков");
+        System.out.println(check1+"-->"+check2+"-->"+check3);
+        if (check1==0){
+            i++;
+        }
+        if (check2==0){
+            i++;
+        }
+        if (check3==0){
+            i++;
+        }
+        System.out.println("Степень четности введеного числа -->"+i);
+    }
+    public static void zadanie_8_19(){
+        System.out.println("Четырехзначное парно - семитричное число");
+        System.out.print("Введите четырехзначное число-->");
+        int number = in.nextInt();
+        int num1 = number/100;
+        int num2 = number%100;
+        System.out.println("Контроль чисел");
+        System.out.print(num1+"--"+num2);
+        if()
 
+    }
 }
