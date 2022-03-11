@@ -11,7 +11,7 @@ public class Main {
 
     public static void main(String[]args){
 
-        Glava8.zadanie_8_19();
+        Glava8.zadanie_8_25();
        // Glava8 a = new Glava8();
       // Glava8 b = new Glava8();
       //  Glava8 c = new Glava8();

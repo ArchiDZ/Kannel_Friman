@@ -335,7 +335,120 @@ public void zadanie_8_9(int a, int b, int c){
         int num2 = number%100;
         System.out.println("Контроль чисел");
         System.out.print(num1+"--"+num2);
-        if()
+        if(num1==num2){
+            System.out.println("Parnosemetrichoe chislo");
+        }else System.out.println("Chislo ne parno semetrichoe");
+    }
+    public static void zadanie_8_20(){
+        System.out.println("Enter 3 symbol number");
+        int number = in.nextInt();
+        int num = number/100;
+        int num2 = (number%10)/10;
+        int num3 = number%10;
+        System.out.println("Проверка чисел");
+        System.out.println(num+" "+num2+" "+num3);
+        if (num==0){
+            System.out.println("Первое число содержит 0");
+        }else {System.out.println("Первое число не содержит 0");}
+        if(num2==0){
+            System.out.println("Второе число содержит 0");
+        }else {System.out.println("Второе число не содержит 0");}
+        if(num3==0){System.out.println("Третье число содержит 0");
+        }else {System.out.println("Третье число не содержит 0");}
+    }
+    public static void zadanie_8_21(){
+        System.out.println("Введите трех значное число");
+        int number = in.nextInt();
+        int num =number%10;
+        int tmp = 0;
+        System.out.println("Проверка-->"+num);
+        if(num<5){
+            tmp = (number/10)*10;
+        }else{
+            tmp = (number/10+1)*10;
+        }
+        System.out.println(tmp);
+    }
+    public static void zadanie_8_22(){
+        System.out.println("Введите любое трехзначное число");
+        int number = in.nextInt();
+        int num = number%10;
+        int tmp = 0;
+        if(number%2==0){
+            System.out.println("Up to");
 
+                tmp = (number/10)*10;
+
+            System.out.println(tmp);
+            System.out.println(number);
+        }else{
+            System.out.println("Down to");
+            tmp = (number/10+1)*10;
+            System.out.println(tmp);
+        }
+        /*Данную задачу переделать,ответ не корректный*/
+    }
+    public static void zadanie_8_23(){
+        System.out.println("Изменения чисел");
+        System.out.println("Введите два числа");
+        int num1 = in.nextInt();
+        int num2 = in.nextInt();
+        if(num1>num2){
+            num1--;
+            num2++;
+        }else if(num1<num2) {
+            num1++;
+            num2--;
+        }
+        if(num1==num2){
+            num1++;
+            num2++;
+        }
+    System.out.println("Число1-->"+num1+" Число2-->"+num2);
+    }
+    public static void zadanie_8_24(){
+        System.out.println("Туда-сюда числа");
+        System.out.println("Введите трехзначное число");
+        int number = in.nextInt();
+        int num = number/100;
+        int num2 = (number/10)%10;
+        int num3 = number%10;
+        System.out.println("---Контроль---");
+        System.out.println("-->"+num+"-->"+num2+"-->"+num3);
+        System.out.println("-----------");
+        if (number>500){
+            int tmp = (num3*100)+(num2*10)+num;
+            System.out.println("Результат-->"+tmp);
+        } else if (number<500){
+            int tmp1 = (num*100)+(num3*10)+num2;
+            System.out.println("Результат"+tmp1);
+        }
+    }
+    public static void zadanie_8_25(){
+        System.out.println("=======================");
+        System.out.print("Введите число-->");
+        int number = in.nextInt();
+        if (number%2==0){
+            System.out.println("Введите дробное число");
+            double num = in.nextDouble();
+            double rezult = number*num;
+            System.out.println("Результат умножения-->"+rezult);
+        } else {
+            System.out.println("Введите целое число");
+            int num1 = in.nextInt();
+            int rez = number+num1;
+            System.out.println("Результат сложения-->"+rez);
+        }
+    }
+    public static void zadanie_8_26(){
+        System.out.println("Число Палиндром");
+        System.out.println("Введите число");
+        int number = in.nextInt();
+        if (number>99&number<999){
+            int num1 = number/100;
+            int num2 = (number/10)%10;
+            int num3 = number%10;
+            System.out.println("-->"+num1+"-->"+num2+"-->"+num3);
+        }else{System.out.println("");}
     }
 }
