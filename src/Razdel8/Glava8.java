@@ -449,6 +449,23 @@ public void zadanie_8_9(int a, int b, int c){
             int num2 = (number/10)%10;
             int num3 = number%10;
             System.out.println("-->"+num1+"-->"+num2+"-->"+num3);
-        }else{System.out.println("");}
+            if (num1==num3){
+                System.out.println("Трехзначное число Полиндром");
+            }else{
+                System.out.println("Данное число не является трехзначным Полиндромом");
+            }
+        }else{
+            System.out.println("Вышли за приделы трехзначных чисел");
+            System.out.println("Переходим в четырехзначные числа");
+        }
+        if(number>=1000&number<10000){
+            int num_i = number/1000;
+            int num_ii = (number/100)%10;
+            int num_iii = (number/10)%10;
+            int num_iv = number%10;
+            System.out.println(num_i+"-->"+num_ii+"-->"+num_iii+"-->"+num_iv);
+        }else{
+            System.out.println("Вышли за приделы четырехзначных чисел");
+        }
     }
 }
