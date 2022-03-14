@@ -441,31 +441,94 @@ public void zadanie_8_9(int a, int b, int c){
         }
     }
     public static void zadanie_8_26(){
+        int num1,num2,num3,num4;
         System.out.println("Число Палиндром");
         System.out.println("Введите число");
         int number = in.nextInt();
         if (number>99&number<999){
-            int num1 = number/100;
-            int num2 = (number/10)%10;
-            int num3 = number%10;
+             num1 = number/100;
+             num2 = (number/10)%10;
+             num3 = number%10;
             System.out.println("-->"+num1+"-->"+num2+"-->"+num3);
             if (num1==num3){
-                System.out.println("Трехзначное число Полиндром");
+                System.out.println("-!!!--Трехзначное число Полиндром");
             }else{
-                System.out.println("Данное число не является трехзначным Полиндромом");
+                System.out.println("-!!!--Данное число не является трехзначным Полиндромом");
             }
         }else{
-            System.out.println("Вышли за приделы трехзначных чисел");
-            System.out.println("Переходим в четырехзначные числа");
+            System.out.println("---Вышли за приделы трехзначных чисел");
+            System.out.println("---Переходим в четырехзначные числа");
         }
         if(number>=1000&number<10000){
-            int num_i = number/1000;
-            int num_ii = (number/100)%10;
-            int num_iii = (number/10)%10;
-            int num_iv = number%10;
-            System.out.println(num_i+"-->"+num_ii+"-->"+num_iii+"-->"+num_iv);
+             num1 = number/1000;
+             num2 = (number/100)%10;
+             num3 = (number/10)%10;
+             num4 = number%10;
+            System.out.println(num1+"-->"+num2+"-->"+num3+"-->"+num4);
+            if(num1==num4){
+                if(num2==num3){
+                    System.out.println("-!!!--Число является четырех значным полиндромом");
+                }
+            }else{
+                System.out.println("-!!!--Данное число не является четырехзначным Полиндромом");
+            }
         }else{
-            System.out.println("Вышли за приделы четырехзначных чисел");
+            System.out.println("---Вышли за приделы четырехзначных чисел");
+            System.out.println("---Переходим в пятизначные числа");
+        }
+        if(number>=10000&number<99999){
+            num1 = number/10000;
+            num2 = (number/1000)%10;
+            num3 = (number/10)%10;
+            num4 = number%10;
+            System.out.println(num1+"-->"+num2+"-->"+num3+"-->"+num4);
+            if(num1==num4){
+                if(num2==num3){
+                    System.out.println("-!!!--Число является четырех значным Полиндромом");
+                }
+            }else{
+                System.out.println("-!!!--Данное число не является пятизначным Полиндромом");
+            }
+        }else {
+            System.out.println("-!!!-- Вышли за приделы поиска--!!!-");
+        }
+    }
+    public static void zadanie_8_27(){
+        System.out.println("Введите два числа");
+        System.out.print("Введите первое число-->");
+        int num = in.nextInt();
+        System.out.println("=======================");
+        System.out.print("Введите второе число-->");
+        int num2 = in.nextInt();
+        int N_num = num%10;
+        int N_num2 = num2%10;
+        if(N_num>N_num2){
+            System.out.println("Последнея цифра, первого числа больше.");
+        }else if(N_num<N_num2) {
+            System.out.println("Последния цифра второго числа больше ");
+        }
+        if (N_num2==N_num){
+            System.out.println("Последние цифры равны");
+        }
+    }
+    public static void zadanie_8_28(){
+        System.out.println("Проверка на возможность дроби");
+        System.out.print("Введите первое число-->");
+        int number1 = in.nextInt();
+        System.out.println("====================");
+        int number2 = in.nextInt();
+        if(number1<number2){
+            System.out.println("Число 1 может быть числителем правильной дроби");
+            System.out.println(number1);
+            System.out.println("---");
+            System.out.println(number2);
+        }
+        if (number1>number2){
+            System.out.println("Число 1 может быть числителем не правильной дроби");
+            int tmp = number1/number2;
+            int tmp1 = number1%number2;
+            System.out.println("Дробь сосстовляет");
+            System.out.println("Целая часть-->"+tmp+" числитель-->"+tmp1+" знаменатель-->"+number2);
         }
     }
 }
