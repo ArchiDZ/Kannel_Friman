@@ -531,4 +531,76 @@ public void zadanie_8_9(int a, int b, int c){
             System.out.println("Целая часть-->"+tmp+" числитель-->"+tmp1+" знаменатель-->"+number2);
         }
     }
+    public static void zadanie_8_29(){
+        System.out.println("Проверка равности дробей");
+        System.out.print("Введите числитель-->");
+        int a = in.nextInt();
+        System.out.println("=================");
+        System.out.print("Введите знаменатель-->");
+        int b = in.nextInt();
+        if(b!=0 && a>b){
+            int c = a/b;
+            a-=c*b;
+            System.out.println(c+" "+a+"/"+b);
+        }else {
+            System.out.println("Подсчет не производится");
+        }
+    }
+    public static void zadanie_8_30(){
+        System.out.println("Проверка равности дробей");
+        System.out.print("Введите числитель-->");
+        int a = in.nextInt();
+        System.out.println("=================");
+        System.out.print("Введите знаменатель-->");
+        int b = in.nextInt();
+        if(b!=0 && a>b){
+            int c = a/b;
+            a-=c*b;
+            System.out.println(c+" "+a+"/"+b);
+        }else {
+            System.out.println("Подсчет не производится");
+        }
+        //повтор предыдущей задачи (условия 8.29 совпадают с 8.30)
+    }
+    public static void zadanie_8_31(){
+        System.out.println("Преобразование трех значного числа");
+        int number = in.nextInt();
+        if(number <99&number>999){
+            System.out.println("-!!!-- Выход за приделы вычислений--!!!-");
+        }
+        int num = number/100;
+        int num2 = (number/10)%10;
+        int num3 = number%10;
+        System.out.println("-->"+num+"-->"+num2+"-->"+num3);
+        if (num>0&num%2==0){
+            num+=1;
+        }else {
+            num-=1;
+        }
+        if (num2>0&num2%2==0){
+            num2+=1;
+        }else {
+            num2-=1;
+        }
+        if (num3>0&num3%2==0){
+            num3+=1;
+        }else {
+            num3-=1;
+        }
+        System.out.println(num+"-->"+num2+"-->"+num3);
+    }
+    public static void zadanie_8_32(){
+        //повтор задачи из главы 8
+        int num = in.nextInt();
+        if(num%2==0){
+            System.out.println("Введите дробное число");
+            double x = in.nextDouble();
+            System.out.println(num*x);
+        }else {
+            System.out.println("Введите целое число");
+            int y = in.nextInt();
+            System.out.println(num+y);
+        }
+
+    }
 }

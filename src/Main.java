@@ -6,27 +6,14 @@ import Razdel5.Glava5;
 import Razdel6.Glava6;
 import Razdel7.Glava7;
 import Razdel8.Glava8;
+import Razdel9.Glava9;
 
 public class Main {
 
     public static void main(String[]args){
 
-        Glava8.zadanie_8_28();
-       // Glava8 a = new Glava8();
-      // Glava8 b = new Glava8();
-      //  Glava8 c = new Glava8();
-//        Glava8 d = new Glava8();
-//        Glava8 e = new Glava8();
-//        Glava8 f = new Glava8();
-//        Glava8 g = new Glava8();
-//
-      //  a.zadanie_8_9(3000,0,0);
-      //  b.zadanie_8_9(239,0,0);
-     //   c.zadanie_8_9(7,0,0);
-//        d.zadanie_8_6(6,12);
-//        e.zadanie_8_6(7,7);
-//        f.zadanie_8_6(14,14);
-//        g.zadanie_8_6(9,18);
+       Glava9.zadanie_9_4();
+
 
         /*
         System.getProperties().list(System.out);
