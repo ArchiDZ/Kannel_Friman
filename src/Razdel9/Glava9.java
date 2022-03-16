@@ -1,9 +1,12 @@
 package Razdel9;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class Glava9 {
 static Random rnd = new Random();
+static Scanner input = new Scanner(System.in);
+
    public void zadanie_9_1(int a, int b) {
        boolean z = a > 10 && b > 100;
        System.out.println(z);
@@ -51,7 +54,51 @@ static Random rnd = new Random();
        if (number>39&&number<101)
            System.out.println("Да");
        else System.out.println("Нет");
+   }
+   public static void zadanie_9_5(){
+       System.out.println("   |_____________|");
+       System.out.println("(6)|-16--17--18--|");
+       System.out.println("(5)|-13--14--15--|");
+       System.out.println("(4)|-10--11--12--|");
+       System.out.println("(3)|--7---8---9--|");
+       System.out.println("(2)|--4---5---6--|");
+       System.out.println("(1)|--1---2---3--|");
 
+       System.out.println("Введите номер квартиры");
+       System.out.print("--->");
+       int num = input.nextInt();
+
+
+   }
+
+   public static void zadanie_9_6(){
+       System.out.println("Проверка длин для треугольника");
+       System.out.print("(1)-->");
+       int a = input.nextInt();
+       System.out.print("(2)-->");
+       int b = input.nextInt();
+       System.out.print("(3)-->");
+       int c = input.nextInt();
+       if((a+b)>c && (a+c)>b && (b+c)>a){
+           System.out.println("---ДА---");
+       }else {
+           System.out.println("---НЕТ---");
+       }
+   }
+   public static void zadanie_9_7(){
+       System.out.println("Проверка треугольника по 2 углам");
+       System.out.println("...Введите 2 Значения...");
+       System.out.print("(1)--->");
+       int a = input.nextInt();
+       System.out.print("(2)--->");
+       int b = input.nextInt();
+       if (a<90 && b<90)
+       {
+           System.out.println("Данный треугольник острый ");
+       }
+       if (a==90 || b==90){
+           System.out.println("Прямоугольный треугольник");
+       }
 
    }
 }
