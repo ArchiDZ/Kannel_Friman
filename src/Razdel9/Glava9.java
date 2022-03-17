@@ -67,7 +67,10 @@ static Scanner input = new Scanner(System.in);
        System.out.println("Введите номер квартиры");
        System.out.print("--->");
        int num = input.nextInt();
-
+        if (num%3==0){
+            int x = num%3;
+            System.out.println("Крайняя квартира с права на этаже"+x);
+        }
 
    }
 
@@ -99,6 +102,6 @@ static Scanner input = new Scanner(System.in);
        if (a==90 || b==90){
            System.out.println("Прямоугольный треугольник");
        }
-
    }
+
 }
