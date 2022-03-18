@@ -169,7 +169,52 @@ public class Glava10 {
     public static void zadanie_10_13(){
         System.out.println("Игра в кости");
         int player1;
-
+        int player2;
+        int score_p1 = 0;
+        int score_p2 = 0;
+        for(int i=1;i<=10;i++ ){
+            System.out.println("-===Раунд "+i+"===-");
+            player1 = rnd.nextInt(1,6);
+            System.out.println("Бросаю кость");
+            System.out.println("У меня выпало-->"+player1);
+            score_p1+=player1;
+            System.out.println("Игрок 1 набрал "+score_p1+" очков");
+            System.out.println("___________________________________");
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            player2 = rnd.nextInt(1,6);
+            System.out.println("И я Бросаю кость");
+            System.out.println("А у меня, у меня выпало-->"+player2);
+            score_p2+=player2;
+            System.out.println("Игрок 2 набрал "+score_p2+" очков");
+            System.out.println("___________________________________");
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        if (score_p1>score_p2){
+            System.out.println("--===Результаты===--");
+            System.out.println("Игрок 1 победил");
+        }
+        if(score_p1<score_p2){
+            System.out.println("--===Результаты===--");
+            System.out.println("Игрок 2 победил");
+        }
+        if (score_p1==score_p2){
+            System.out.println("--===Результаты===--");
+            System.out.println("Победила дружба");
+        }
+    }
+    public static void zadanie_10_14(){
+        System.out.println("Генерация 5 случайных чисел");
+        int x = 5;
+        int count = 0;
+        for(int i = 0;i<10;i++){}
     }
 
 }

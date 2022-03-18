@@ -13,7 +13,7 @@ public class Main {
 
     public static void main(String[]args){
 
-        Glava10.zadanie_10_12();
+        Glava10.zadanie_10_13();
 
 
         /*
