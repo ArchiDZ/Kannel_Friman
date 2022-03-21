@@ -1,7 +1,6 @@
 package Razdel10;
 
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class Glava10 {
     static Random rnd = new Random();
@@ -179,7 +178,7 @@ public class Glava10 {
             System.out.println("У меня выпало-->"+player1);
             score_p1+=player1;
             System.out.println("Игрок 1 набрал "+score_p1+" очков");
-            System.out.println("___________________________________");
+            System.out.println(".......");
             try {
                 Thread.sleep(3000);
             } catch (InterruptedException e) {
@@ -212,9 +211,167 @@ public class Glava10 {
     }
     public static void zadanie_10_14(){
         System.out.println("Генерация 5 случайных чисел");
-        int x = 5;
-        int count = 0;
-        for(int i = 0;i<10;i++){}
+       int a,a1,a2,a3;
+       int down = 250;
+       int up = 746;
+       int min = -1;
+       int max = 10;
+
+       a = down+(int)((up-down+1)*Math.random());
+       System.out.println("-->"+a);
+       a1 = a/100;
+       a2 = (a/10)%10;
+       a3 = a%10;
+
+       if(a1<=a2 && a1<=a3)
+           min = a1;
+        if(a2<=a1 && a2<=a3)
+            min = a2;
+        if(a3<=a1 && a3<=a2)
+            min = a3;
+        if(a1>=a2 && a1>=a3)
+            max = a1;
+        if(a2>=a1 && a2>=a3)
+            max = a2;
+        if(a3>=a1 && a3>=a2)
+            max = a3;
+        System.out.println(min+" "+max);
+        if (a1==a2||a2==a3||a1==3)
+            System.out.println("Да");
+        else
+            System.out.println("Нет");
+        /*
+        * Пример предложеный в задачнике для решения 10,14
+        * Не пойдет! Это надо переделать
+        * */
+        }
+        public static void zadanie_10_15(){
+            System.out.println("Выявление самого маленько числа из трехзначного");
+            int number = rnd.nextInt(250,746);
+            System.out.println("Случайное число-->"+number);
+            int num1 = number/100;
+            int num2 = (number/10)%10;
+            int num3 = number%10;
+            System.out.println("Число в разложеном виде");
+            System.out.println(num1+"-->"+num2+"-->"+num3);
+            int [] arr = {num1,num2,num3};
+            int min = arr[0];
+            for (int x : arr){
+                if (x<min){
+                    min = x;
+                }
+            }
+            System.out.println(min);
+
+        }
+
+        public static void zadanie_10_16(){
+        System.out.println("Сравнение двух случайных чисел");
+        int num1 = rnd.nextInt(17,94);
+        int num2 = rnd.nextInt(17,94);
+        System.out.println("(1)-->"+num1+" (2)-->"+num2);
+        if (num1>num2){
+            System.out.println("---Первое число больше");
+        }else{
+            System.out.println("---Второе число больше");
+        }
+        int num1_i = num1/10;
+        int num1_ii = num1%10;
+        System.out.println(num1_i+"--"+num1_ii);
+        int num2_i = num2/10;
+        int num2_ii = num2%10;
+        System.out.println(num2_i+"--"+num2_ii);
+        System.out.println("===================");
+       int [] arr = {num1_i,num1_ii,num2_i,num2_ii};
+            OptionalInt x = Arrays.stream(arr).min(); // ну как вариант можно и так
+            System.out.println("Самая маленькая цифра из чисел"+num1+" и "+num2);
+            System.out.println(x.getAsInt());       // хотя, может можно и проще
+        }
+
+        public static void zadanie_10_17(){
+            double katet = rnd.nextDouble(10.5);
+            double katet2 = rnd.nextDouble(10.5);
+            System.out.println(katet+"---"+katet2);
+            double gipotenuza = Math.sqrt((Math.pow(katet,2)+Math.pow(katet2,2)));
+            System.out.println("-->"+gipotenuza);
+        }
+        public static void zadanie_10_18(){
+        int number1 = rnd.nextInt(99,999);
+        int number2 = rnd.nextInt(99,999);
+        int number3 = rnd.nextInt(99,999);
+        int max = 0,min = 0;
+        System.out.println("(1)-->"+number1+" (2)-->"+number2+" (3)-->"+number3);
+        if(number1>number2 && number1>number3){
+            max=number1;
+        }else{
+            min=number1;
+        }
+        if(number2>number1 && number2>number3){
+            max=number2;
+        }else{
+            min = number2;
+        }
+        if(number3>number1 && number3>number2){
+            max=number3;
+        }else {
+            min=number3;
+        }
+        System.out.println("max-->"+max);
+        System.out.println("min--->"+min);
+        }
+        public static void zadanie_10_19(){
+        int minus_num=0;
+        for(int i=0;i<5;i++){
+            int num = rnd.nextInt(-50,50);
+            if(num<0){
+                minus_num++;
+            }
+            System.out.println(i+"-->"+num);
+        }
+        System.out.println("Знак менялся-->"+minus_num);
+        }
+
+        public static void zadanie_10_20(){
+        int number1 = rnd.nextInt(0,9);
+        int number2 = rnd.nextInt(99,999);
+        int max = 0;
+        System.out.println(number1+"---"+number2);
+        int num1 = number2/100;
+        int num2 = (number2/10)%10;
+        int num3 = number2%10;
+        System.out.println(num1+"--"+num2+"--"+num3);
+        if(num1>num2 && num1>num3){
+            max = num1;
+        } else if(num2>num1 && num2>num3){
+            max = num2;
+        } else if (num3>num1 && num3>num2){
+            max=num3;
+        }
+        System.out.println("--"+max);
+
+        }
+        public static void zadanie_10_21(){
+        System.out.println("Положение точки в декартовой системе");
+        int x = rnd.nextInt(-30,30);
+        int y = rnd.nextInt(-30,30);
+        System.out.println("X-->"+x+" Y-->"+y);
+        if(x<=0 && y>=0){
+            System.out.println("Сектор Альфа");
+        }
+        if(x>=0 && y>=0){
+            System.out.println("Сектор Бета");
+        }
+        if(x>=0 && y<=0){
+            System.out.println("Сектор Гамма");
+        }
+        if(x<=0 && y<=0){
+            System.out.println("Сектор Дельта");
+        }
+
+
+        }
+        public static void zadanie_10_22(){}
+
     }
 
-}
+

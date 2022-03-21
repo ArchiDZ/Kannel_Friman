@@ -1,19 +1,11 @@
-import Razdel1.Glava1;
 import Razdel10.Glava10;
-import Razdel2.Glava2;
-import Razdel3.Glava3;
-import Razdel4.Glava4;
-import Razdel5.Glava5;
-import Razdel6.Glava6;
-import Razdel7.Glava7;
-import Razdel8.Glava8;
-import Razdel9.Glava9;
+import Razdel11.Glava11;
 
 public class Main {
 
     public static void main(String[]args){
 
-        Glava10.zadanie_10_13();
+        Glava10.zadanie_10_21();
 
 
         /*
