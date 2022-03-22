@@ -357,20 +357,46 @@ public class Glava10 {
         System.out.println("X-->"+x+" Y-->"+y);
         if(x<=0 && y>=0){
             System.out.println("Сектор Альфа");
+            if(-x>y){
+                System.out.println("--Точка находится ближе к оси Х");
+            }else {
+                System.out.println("--Точка находится ближе к оси У");
+            }
         }
         if(x>=0 && y>=0){
             System.out.println("Сектор Бета");
+            if(x>y){
+                System.out.println("--Точка находится ближе к оси Х");
+            } else {
+                System.out.println("--Точка находится ближе к оси У");
+            }
         }
         if(x>=0 && y<=0){
             System.out.println("Сектор Гамма");
+            if(x>-y){
+                System.out.println("--Точка находится ближе к оси Х");
+            }else {
+                System.out.println("--Точка находится ближе к оси У");
+            }
         }
         if(x<=0 && y<=0){
             System.out.println("Сектор Дельта");
+            if(-x>-y){
+                System.out.println("--Точка находится ближе к оси Х");
+            }else {
+                System.out.println("--Точка находится ближе к оси У");
+            }
         }
-
-
+        System.out.println("---***---");
+        System.out.println("Расстояние между точкой и началом координат");
+        double C = (double) Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
+        System.out.println("---"+Math.round(C));
+        System.out.println("---***---");
+        double fi = Math.atan2(y,x);
+        double ug = Math.toDegrees(fi);
+        System.out.println("----"+fi);
+        System.out.println("Math.toDegrees-->"+ug);
         }
-        public static void zadanie_10_22(){}
 
     }
 
