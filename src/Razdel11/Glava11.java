@@ -351,13 +351,21 @@ public class Glava11 {
         System.out.println("15 случайных трехзначных чисел");
         System.out.print("Введите число-->");
         int enter_num = scn.nextInt();
-        for(int i = 0;i<15;i++){
+        for(int i = 1;i<=15;i++){
             int number = rnd.nextInt(100,999);
+               System.out.print("("+i+")"+number+"-->");
                 if(number%enter_num==0){
                     int num = number/100;
                     int num2 = number%100;
-                    System.out.println(number+"---"+num+"-->"+num2);
+                    System.out.print("*"+num+"*sqrt-->"+Math.sqrt(num));
+                    System.out.println("==>"+num2+"===>sqrt num2-->"+Math.sqrt(num2));
                 }
+        }
+    }
+    public static void zadanie_11_39(){
+        System.out.println("===========================");
+        for(int i = 99;i>9;i--){
+            System.out.print(i+" ");
         }
     }
 }
