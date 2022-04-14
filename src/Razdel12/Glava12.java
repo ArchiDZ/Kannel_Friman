@@ -36,5 +36,16 @@ public class Glava12 {
        System.out.println("НЕчетных чисел было в ряде-->"+count_nech);
    }
 
+   public static void zadanie_12_3(){
+       int counter=0;
+       int number1 = read.nextInt();
+       for (int i =1;i<13;i++){
+           int next_number = read.nextInt();
+           if(number1<next_number){
+               counter++;
+           }
+       }System.out.println("Больше первого числа было "+counter+" чисел");
+   }
+
 
 }

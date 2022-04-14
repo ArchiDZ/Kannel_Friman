@@ -368,6 +368,71 @@ public class Glava11 {
             System.out.print(i+" ");
         }
     }
+    public int zadanie_11_5(int num){
+        System.out.println("Трассировка для значений 1--2--3--6");
+        int k = 1;
+        int number = 0;
+        for(int i=1;i<4;i++){
+            if(num%2==0){
+                number = (number*10)+num;
+            }else {
+                k = k*10;
+                number = number+k;
+            }
+        }
+        System.out.println("Значение num-->"+ num);
+        System.out.println("Значение number-->"+number);
+        return num;
+    }
+    public static void zadanie_11_6(){
+        System.out.println("Генерация 20 случайных значений заданных" +
+                "пользователем");
+        System.out.print("Введите начальное значение-->");
+        int num_start = scn.nextInt();
+        System.out.println("--------------------");
+        System.out.print("Введите конечное значение-->");
+        int num_finish = scn.nextInt();
+        for(int i = 1;i<20;i++){
+            int number = rnd.nextInt(num_start,num_finish);
+            System.out.println("("+i+")-->"+number);
+        }
+    }
+    public static void zadanie_11_7(){
+        System.out.println("Генерация 20 случайных значений заданных" +
+                "пользователем");
+        System.out.print("Введите число-->");
+        int num1 = scn.nextInt();
+        System.out.println("--------------------");
+        System.out.print("Введите еще число-->");
+        int num2 = scn.nextInt();
+
+        if(num1<num2){
+            for(int i = 1;i<20;i++){
+                int number = rnd.nextInt(num1,num2);
+                System.out.println("("+i+")-->"+number);
+        }
+    }else {
+            for (int i = 1;i<20;i++){
+                int number = rnd.nextInt(num2,num1);
+                System.out.println("("+i+")-->"+number);
+            }
+        }
+    }
+
+    public static void zadanie_11_40(){
+        System.out.println("Трехзначные числа");
+        System.out.println("Произведение первой и последней цифр равно квадрату средней");
+        for (int i=99;i<1000;i++){
+            int num = i/100;
+            int num2 = (i/10)%10;
+            int num3 = i%10;
+
+            if(num*num3==Math.pow(num2,2)){
+                System.out.print(" | "+i);
+            }
+        }
+    }
+
 }
 
 
