@@ -7,7 +7,14 @@ public class Main {
     public static void main(String[]args){
 
        // Glava12.zadanie_12_2();
-        Glava11.zadanie_11_39();
+        Glava12.zadanie_12_10();
+//        int i=1234;
+//        int num1 = i/1000;
+//        int num2 =(i/100)%10;
+//        int num3 = (i%100)/10;
+//        int num4 = i%10;
+//        System.out.println(num1+" "+num2+" "+num3+" "+num4);
+
 
 
         /*
