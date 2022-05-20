@@ -1,5 +1,6 @@
 package Razdel12;
 
+import javax.swing.*;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -181,5 +182,201 @@ public class Glava12 {
            System.out.println("Контрольная прошла успешно");
            System.out.println("Неудовлетворительных оценок "+couter);
        }
+    }
+    public static void zadanie_12_11(){
+       System.out.println("Опросник для учеников, кто готов поехать на экскурсию" +
+               "всего 200 учеников. программа генерирует рандомные ответы готов и ли не готов");
+       int ready_counter = 0;
+       int notReady_counter = 0;
+       for(int i = 1;i<=200;i++){
+           int rand = rnd.nextInt(0,2);
+           if(rand == 1){
+               ready_counter++;
+           }
+           if(rand == 0){
+               notReady_counter++;
+           }
+       }
+        System.out.println("На экскурсию готов поехать "+ready_counter+" ученик");
+        System.out.println("Не готовы к поездке "+notReady_counter+" учеников");
+    }
+    public static void zadanie_12_12(){
+       System.out.println("Генерируем случайную дату рождения для 1234 человек. Далее подсчет сколько " +
+               "Человек родилось в какое время года");
+       int summer = 0;
+       int autumn = 0;
+       int winter = 0;
+       int spring = 0;
+       int age = 2022;
+
+       for(int i=1;i<=1234;i++){
+           int date = rnd.nextInt(1,29);
+           int month = rnd.nextInt(1,12);
+           int year = rnd.nextInt(1945,2022);
+           if(month == 12 || month==1 || month == 2){
+               winter++;
+           }
+           if(month == 3 || month==4 || month == 5){
+               spring++;
+           }
+           if(month == 6 || month==7 || month == 8){
+               summer++;
+           }
+           if(month == 9 || month==10 || month == 11){
+               autumn++;
+           }
+           System.out.println(i+"# "+date+"."+month+"."+year+"-- возраст: "+(age-year)+" лет");
+       }
+        System.out.println("Зимой родилось "+winter+" человек");
+        System.out.println("Весной родилось "+spring+" человек");
+        System.out.println("Летом родилось "+summer+" человек");
+        System.out.println("Осенью родилось "+autumn+" человек");
+    }
+    public static void zadanie_12_13(){
+       System.out.println("Имитация подбрасывания монетки (Орел или Решка)" +
+               "10,100 и 1000 раз.");
+       int orel = 0;
+       int resh = 0;
+
+       for(int i = 1;i<=10;i++){
+           int brosok = rnd.nextInt(0,2);
+           if (brosok == 1){
+               orel++;
+           }else
+               resh++;
+       }
+       System.out.println("Результаты подбрасывания 10");
+       System.out.println("Орел->"+orel+" Решка->"+resh);
+       System.out.println("-----------------------------");
+        for(int i = 1;i<=100;i++){
+            int brosok = rnd.nextInt(0,2);
+            if (brosok == 1){
+                orel++;
+            }else
+                resh++;
+        }
+        System.out.println("Результаты подбрасывания 100");
+        System.out.println("Орел->"+orel+" Решка->"+resh);
+        System.out.println("-----------------------------");
+        for(int i = 1;i<=1000;i++){
+            int brosok = rnd.nextInt(0,2);
+            if (brosok == 1){
+                orel++;
+            }else
+                resh++;
+        }
+        System.out.println("Результаты подбрасывания 1000");
+        System.out.println("Орел->"+orel+" Решка->"+resh);
+        System.out.println("-----------------------------");
+    }
+    public static void zadanie_12_14(){
+       System.out.println("Серия чисел называется уравновешенной если количество положительных" +
+               "и отрицательных чисел одинаково. Генерация 30 случайных");
+       int plus = 0;
+       int minus = 0;
+       for (int i = 1;i<=30;i++){
+           int number = rnd.nextInt(-20,20);
+
+           if(number<0){
+               minus++;
+           } else
+               plus++;
+           System.out.print(number+" ");
+       }
+       System.out.println("Положительных чисел--"+plus+" Отрицательных--"+minus);
+       if(plus==minus){
+           System.out.println("Числовой ряд является уравновешанным");
+       } else
+           System.out.println("Числовой ряд не уравновешен");
+    }
+    public static void zadanie_12_15(){
+       System.out.println("Принимает число Х и выводит все его делители");
+       System.out.print("Введите число__");
+       int number = read.nextInt();
+       for (int i=1;i<number;i++){
+           if(number%i==0){
+               System.out.println(i+" ");
+           }
+       }
+    }
+    public static void zadanie_12_16(){
+       System.out.println("Проверка простых чисел");
+        System.out.print("Введите число__");
+        int number = read.nextInt();
+        for (int i=1;i<number;i++){
+            if(number%i==0){
+                System.out.println("Число не простое");
+            }else
+                System.out.println("Это простое число");
+        }
+    }
+    public static void zadanie_12_17(){
+       System.out.println("Число называют родственным если у них есть одинаковое количество делителей");
+        int number1 = rnd.nextInt(1,100);
+        int number2 = rnd.nextInt(1,100);
+        int counter1 = 0;
+        int counter2 = 0;
+        for (int i=1;i<number1;i++){
+            if(number1%i==0){
+                counter1++;
+            }
+        }
+        for (int i = 1;i<number2;i++){
+            if(number2%i == 0){
+                counter2++;
+            }
+        }
+        System.out.print(counter1+"==="+counter2);
+    }
+    public static void zadanie_12_18(){
+       System.out.println("Степень родства двух целых чисел количество их общих делителей");
+       System.out.print("Первое число--> ");
+       int number1 = read.nextInt();
+       System.out.print("Второе число-->");
+       int number2 = read.nextInt();
+       int count = 0;
+       int tmp;
+       if (number1>number2){
+           tmp=number1;
+       }else
+           tmp=number2;
+       for(int i = 1;i<=tmp/2;i++){
+           if (number1%i==0 && number2%i==0){
+               count++;
+           }
+       }
+       System.out.print("-->"+count);
+    }
+    public static void zadanie_12_19(){
+       System.out.println("15 точек на плоскости окружности");
+       System.out.println("-Центр окружности (два действительных числа");
+       System.out.println("--Радиус окружности");
+       System.out.println("---15 пар координат на плоскости");
+       System.out.println("==============================================");
+       System.out.println("                Центр окружности");
+       System.out.println("===============================================");
+       System.out.print("Введите Х-->");
+       double x = read.nextDouble();
+       System.out.print("Введите У-->");
+       double y = read.nextDouble();
+       System.out.print("Введите радиус окружности-->");
+       double R = read.nextDouble();
+       double D = R*2;
+       int counter = 0;
+       System.out.println("=================================================");
+       for(int i=1;i<=15;i++){
+           double dotX = Math.round(rnd.nextDouble(-25,25)*100.0)/100.0;
+           double dotY = Math.round(rnd.nextDouble(-25,25)*100.0)/100.0;
+           System.out.println("Точка ("+i+"): {"+dotX+";"+dotY+"}");
+           double leftSide = Math.pow(x-dotX,2)+Math.pow(y-dotY,2);
+           if(leftSide<=Math.pow(R,2)){
+               System.out.println("Точка находится в окружности");
+               counter++;
+           }else
+               System.out.println("Точка за приделами окружности");
+           System.out.println("------------------------------------------------");
+       }
+       System.out.println("==================================================");
+       System.out.println("В окружность попало "+counter+" точек из 15");
     }
 }
