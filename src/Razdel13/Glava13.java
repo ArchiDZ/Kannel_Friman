@@ -380,7 +380,480 @@ public class Glava13 {
       for(int i=1;i<=number;i++){
           int step = (i-1)+(i-2);
           System.out.print(step+" ");
-
       }
+    }
+    public static void zadanie_13_18(){
+        String head = "На вклад в банке ежемесячно начисляются сумма которая зависит от ежемесячного " +
+                "процента на вклад.";
+        System.out.println(head);
+        Delimetr.deleq(head.length());
+        System.out.print("Введите сумму вклада-->");
+        double money = scn.nextDouble();
+        Delimetr.delmin(30);
+        System.out.print("Введите процентную ставку-->");
+        int stavka = scn.nextInt();
+        Delimetr.delmin(30);
+        System.out.print("Введите количество месяцев вклада-->");
+        int month = scn.nextInt();
+        Delimetr.delmin(30);
+        for (int i= 1;i<=month;i++){
+            money+=money/100*stavka;
+        }
+        System.out.print("Сумма накоплений "+money);
+    }
+    public static void zadanie_13_19(){
+        String str1 = "Стабильное положительное двузначное число которое при умножении на " +
+                "2 дает такое двухзначное число, в котором сумма цифр равна сумме цифр" +
+                "до умножения";
+        System.out.println(str1);
+        Delimetr.deleq(str1.length());
+        int counter=0;
+        for(int i=10;i<=99;i++){
+            int num1 = i/10;
+            int num2 = i%10;
+            int summ = num1+num2;
+            int number1 = (i*2)/10;
+            int number2 = (i*2)%10;
+            int sum = number1+number2;
+            if(sum==summ){
+                System.out.print(i+" ");
+                counter++;
+            }
+        }
+        System.out.println("Общее количество стабильных двузначных чисел "+counter);
+    }
+    public static void zadanie_13_20(){
+        String str = "Двузначные числа , сумма чисел куба равна квадрату самого числа";
+        System.out.println(str);
+        Delimetr.deleq(str.length());
+        int summ = 0;
+        for(int i=10;i<=99;i++){
+            int number = (int)Math.pow(i,3);
+            int sqNumber = (int)Math.pow(i,2);
+        if(number<=9999 && number>1000 ){
+            int num1 = number/1000;
+            int num2 = (number/100)%10;
+            int num3 = (number%100)/10;
+            int num4 = number%10;
+            summ = num1+num2+num3+num4;
+            if(summ==sqNumber){
+                System.out.println(i+"--"+number+"--"+num1+" "+num2+" "+num3+" "+num4+"-->"+summ+"--"+sqNumber);
+            }
+            }
+        if(number<=99999 && number>9999){
+            int num1 = number/10000;
+            int num2 = (number/1000)%10;
+            int num3 =(number/100)%10;
+            int num4 = (number%100)/10;
+            int num5 = number%10;
+            summ = num1+num2+num3+num4+num5;
+            if(summ==sqNumber){
+                System.out.println(i+"--"+number+"--"+num1+" "+num2+" "+num3+" "+num4+" "+num5+"-->"+summ+"--"+sqNumber);
+            }
+        }
+        if (number<=999999 && number>99999){
+            int num1 = number/100000;
+            int num2 = (number/10000)%10;
+            int num3 = (number/1000)%10;
+            int num4 =(number/100)%10;
+            int num5 = (number%100)/10;
+            int num6 = number%10;
+            summ = num1+num2+num3+num4+num5+num6;
+            if(summ==sqNumber){
+                System.out.println(i+"--"+number+"--"+num1+" "+num2+" "+num3+" "+num4+" "+num5+" "+num6+"-->"+summ+"--"+sqNumber);
+            }
+        }
+            System.out.println(i+"--"+number+"-->"+summ+"--"+sqNumber);
+        Delimetr.delmin(22);
+        }
+    }
+    public static void zadanie_13_21(){
+        String str = "Вывод на экран все двузначные числа,равные утроеному произведению их цифр";
+        System.out.println(str);
+        Delimetr.deleq(str.length());
+        for(int i=10;i<=99;i++){
+            int num1 = i/10;
+            int num2 = i%10;
+            int number = (num1*num2)*3;
+            System.out.print(i+"--"+num1+" "+num2+"-->"+number);
+            Delimetr.delmin(20);
+        }
+    }
+    public static void zadanie_13_22(){
+        String str = "Число Армстронга называется то число куб суммы цифр равен самому числу";
+        System.out.println(str);
+        Delimetr.deleq(str.length());
+        int counter=0;
+        int total_sum = 0;
+        for(int i=100;i<=999;i++){
+            int num1 = i/100;
+            int num2 = (i/10)%10;
+            int num3 = i%10;
+            int sum = (int) (Math.pow(num1,3)+Math.pow(num2,3)+Math.pow(num3,3));//num1+num2+num3;
+          //  int total = (int) Math.pow(sum,3);
+            if(sum==i){
+                counter++;
+                total_sum+=sum;
+                System.out.print(i+" "+sum+" ");//+total);
+                Delimetr.delmin(25);
+            }
+        }
+        System.out.println("Общаая сумма все чисел Армстронга-->"+total_sum);
+        System.out.println("Кол-во чисел армстронга = "+counter);
+    }
+    public static void zadanie_13_23(){
+        String str = "Все двузначные числа, у которых удвоенная сумма цифр равна их произведению";
+        System.out.println(str);
+        Delimetr.deleq(str.length());
+        int total = 0;
+        int counter=0;
+        for(int i=10;i<=99;i++){
+            int num1 = i/10;
+            int num2 = i%10;
+            int doSum = (num1+num2)*2;
+            int multi = num1*num2;
+            if(doSum==multi){
+                counter++;
+                total+=i;
+                System.out.print(i+" ");
+            }
+        }
+        Delimetr.delmin(20);
+        System.out.println("Кол-во таких чисел-->"+counter);
+        System.out.println("Общая сумма данных чисел-->"+total);
+    }
+
+    public static void zadanie_13_24(){
+        String s = "Серия из 20 случайных чисел в диапазоне 30..49, числа меньше первого в серии " +
+                "вывести со знаком -, больше со знаком +";
+        System.out.println(s);
+        Delimetr.deleq(s.length());
+        int first_num = rnd.nextInt(30,49);
+        int min = 0;
+        int pl = 0;
+        System.out.print(first_num+" ");
+        for(int i=0;i<19;i++){
+            int number = rnd.nextInt(30,49);
+            if(first_num>number){
+                System.out.print("-"+number);
+                min++;
+            }
+            if(first_num<number){
+                System.out.print("+"+number);
+                pl++;
+            }
+        }
+        Delimetr.delmin(25);
+        System.out.println("(-)-->"+min);
+        System.out.println("(+)-->"+pl);
+    }
+    public static void zadanie_13_25(){
+        String s = "Серия 25 случайных чисел в диапазоне от 10 до 99, вывод только тех чисел которые " +
+                "делятся на первое число в серии без остатка";
+        System.out.println(s);
+        Delimetr.deleq(s.length());
+        int first_num = rnd.nextInt(10,99);
+        System.out.println(first_num);
+        for(int i=0;i<25;i++){
+            int num = rnd.nextInt(10,99);
+            if(num%first_num==0){
+                System.out.println(num+" ");
+            }
+        }
+    }
+    public static void zadanie_13_26(){
+        String s = "Серия из 15 случайных чисел из диапазона -30..+30, вывести на экран только те числа которые" +
+                "имеют такой же знак как и предыдущее число, 0 значится как положительное";
+        System.out.println(s);
+        Delimetr.deleq(s.length());
+        int max = 15;
+        int counter=0;
+        int first_num = rnd.nextInt(-30,30);
+        System.out.println(first_num);
+        for(int i=1;i<90;i++){
+            int num = rnd.nextInt(-30,30);
+            if (first_num<0 && num<0){
+                System.out.print(num+" ");
+                counter++;
+
+            }
+            if(first_num>=0 && num>=0){
+                System.out.print(num+" ");
+                counter++;
+            }
+
+            if (counter==15){
+                break;
+            }
+        }
+    }
+    public static void zadanie_13_27(){
+        String s = "Программа принимает 3 целых числа и проверяет являются ли тремя последовательными " +
+                "членами арифмитеческой прогресси. Если ДА то вывести на экран 14 чисел данной прогресии," +
+                "если НЕТ то вывести соответсвующие сообщение";
+        System.out.println(s);
+        Delimetr.deleq(s.length());
+        System.out.println("Введите 3 числа последовательности");
+        System.out.print("1-->");
+        int num1 = scn.nextInt();
+        System.out.print("2-->");
+        int num2 = scn.nextInt();
+        System.out.print("3-->");
+        int num3 = scn.nextInt();
+        Delimetr.delmin(25);
+        int d1 = num2-num1;
+        int d2 = num3-num2;
+        if(d1!=d2){
+            System.out.print("Данные числа не является из 1 серии арифмитеской прогрессии");
+        }
+        else
+            for(int i = 1;i<14;i++){
+                num3+=d2;
+                System.out.print(num3+" ");
+            }
+    }
+    public static void zadanie_13_28(){
+        String s = "Вводимы 4 числа являются указателями для ряда чисел одной прогресии." +
+                "1 и 2 пара чисел - значение и порядковый номер одной прогресии, необходимо вывести все значения между " +
+                "двумя введенными";
+        System.out.println(s);
+        Delimetr.deleq(s.length());
+        System.out.println("Введите первую пару");
+        System.out.print("1-->");
+        int num1 = scn.nextInt();
+        System.out.print("2-->");
+        int num2 = scn.nextInt();
+        System.out.println("Введите вторую пару чисел");
+        System.out.print("3-->");
+        int num3 = scn.nextInt();
+        System.out.print("4-->");
+        int num4 = scn.nextInt();
+        // Не закончена
+    }
+    public static void zadanie_13_29(){
+        String s ="Для участия в финале принимали участия 12 человек, всего 3 этапа для прохождения в третий этап" +
+                "необходимо было набрать 80 баллов";
+        System.out.println(s);
+        Delimetr.deleq(s.length());
+        int num1=0;
+        int num2=0;
+        int num3=0;
+        int num4=0;
+        int num5=0;
+        int num6=0;
+        int num7=0;
+        int num8=0;
+        int num9=0;
+        int num10=0;
+        int num11=0;
+        int num12=0;
+        for (int i=1;i<3;i++){
+            int score = rnd.nextInt(1,50);
+            num1+=score;
+            System.out.print("Этап ("+i+") участник 1 получил "+score);
+
+        }
+        if(num1>80){
+            System.out.println("Участник прошел в третий этап");
+        }
+        Delimetr.delmin(20);
+        for (int i=1;i<3;i++){
+            int score = rnd.nextInt(1,50);
+            num2+=score;
+            System.out.print("Этап ("+i+") участник 2 получил "+score);
+        }
+        if(num2>80){
+            System.out.println("Участник прошел в третий этап");
+        }
+        Delimetr.delmin(20);
+        for (int i=1;i<3;i++){
+            int score = rnd.nextInt(1,50);
+            num3+=score;
+            System.out.print("Этап ("+i+") участник 3 получил "+score);
+        }
+        if(num3>80){
+            System.out.println("Участник прошел в третий этап");
+        }
+        Delimetr.delmin(20);
+        for (int i=1;i<3;i++){
+            int score = rnd.nextInt(1,50);
+            num4+=score;
+            System.out.print("Этап ("+i+") участник 4 получил "+score);
+        }
+        if(num4>80){
+            System.out.println("Участник прошел в третий этап");
+        }
+        Delimetr.delmin(20);
+        for (int i=1;i<3;i++){
+            int score = rnd.nextInt(1,50);
+            num5+=score;
+            System.out.print("Этап ("+i+") участник 5 получил "+score);
+        }
+        if(num5>80){
+            System.out.println("Участник прошел в третий этап");
+        }
+        Delimetr.delmin(20);
+        for (int i=1;i<3;i++){
+            int score = rnd.nextInt(1,50);
+            num6+=score;
+            System.out.print("Этап ("+i+") участник 6 получил "+score);
+        }
+        if(num6>80){
+            System.out.println("Участник прошел в третий этап");
+        }
+        Delimetr.delmin(20);
+        for (int i=1;i<3;i++){
+            int score = rnd.nextInt(1,50);
+            num7+=score;
+            System.out.print("Этап ("+i+") участник 7 получил "+score);
+        }
+        if(num7>80){
+            System.out.println("Участник прошел в третий этап");
+        }
+        Delimetr.delmin(20);
+        for (int i=1;i<3;i++){
+            int score = rnd.nextInt(1,50);
+            num8+=score;
+            System.out.print("Этап ("+i+") участник 8 получил "+score);
+        }
+        if(num8>80){
+            System.out.println("Участник прошел в третий этап");
+        }
+        Delimetr.delmin(20);
+        for (int i=1;i<3;i++){
+            int score = rnd.nextInt(1,50);
+            num9+=score;
+            System.out.print("Этап ("+i+") участник 9 получил "+score);
+        }
+        if(num9>80){
+            System.out.println("Участник прошел в третий этап");
+        }
+        Delimetr.delmin(20);
+        for (int i=1;i<3;i++){
+            int score = rnd.nextInt(1,50);
+            num10+=score;
+            System.out.print("Этап ("+i+") участник 10 получил "+score);
+        }
+        if(num10>80){
+            System.out.println(" Участник прошел в третий этап");
+        }
+        Delimetr.delmin(20);
+        for (int i=1;i<3;i++){
+            int score = rnd.nextInt(1,50);
+            num11+=score;
+            System.out.print("Этап ("+i+") участник 11 получил "+score);
+        }
+        if(num11>80){
+            System.out.println(" Участник прошел в третий этап");
+        }
+        Delimetr.delmin(20);
+        for (int i=1;i<3;i++){
+            int score = rnd.nextInt(1,50);
+            num12+=score;
+            System.out.print("Этап ("+i+") участник 12 получил "+score);
+        }
+        if(num12>80){
+            System.out.println(" Участник прошел в третий этап");
+        }
+        Delimetr.delmin(20);
+    }
+    public static void zadanie_13_30(){
+        String s = "Производство стальных шариков шарик должен быть 24мм отклонение +-2мм, вес 74грамм +-3";
+        System.out.println(s);
+        Delimetr.deleq(s.length());
+        int ideal=0;
+
+        for(int i=0;i<=1000;i++){
+            int razmer = rnd.nextInt(22,26);
+            int ves = rnd.nextInt(71,77);
+            System.out.println("Шарик № "+i+" диаметр: "+razmer+"мм"+" Вес: "+ves+"грамм");
+            if(razmer==24 && ves==74){
+                System.out.print("Идеальный шарик");
+                ideal++;
+            }
+            if(razmer>24){
+                System.out.println("Шарик чуть больше стандарта");
+            } if(razmer<24) {
+                System.out.println("Шарик чуть меньше стандарта");
+            }
+            if(ves>74){
+                System.out.println("Шарик немного тяжелее стандарта");
+            }if(ves<74) {
+                System.out.println("Шарик немного легче");
+            }
+            Delimetr.delmin(25);
+        }
+        System.out.println("Всего идеальных шариков получилось-->"+ideal);
+    }
+    public static void zadanie_13_31(){
+        String s = "Распределение по классам 40 человек. Оценки по 10 бальной шкале. Два направления физико-математический и" +
+                "физико-информационный. Если оценка по математике выше чем по информатике-->физико-математический";
+        System.out.println(s);
+        Delimetr.deleq(s.length()/2);
+        int mathFizik = 0;
+        int infoFizik = 0;
+        int doubleChance = 0;
+        int noChoice=0;
+        for(int i = 0;i<=40;i++){
+            int scoreMath = rnd.nextInt(1,10);
+            int scoreFizik = rnd.nextInt(1,10);
+            System.out.println("Студент №("+i+")");
+            System.out.println("Математика - "+scoreMath);
+            System.out.println("Физика - "+scoreFizik);
+            if(scoreMath>=7){
+                System.out.println("Может быть зачислен в Физико-Математический класс");
+                mathFizik++;
+            }
+            if(scoreFizik>=7){
+                System.out.println("Студент может быть зачислен в Физико-Информационный класс");
+                infoFizik++;
+            }
+            if(scoreMath>=7 && scoreFizik>=7){
+                System.out.println("Студент может быть зачислен в оба класса");
+                doubleChance++;
+            }
+            if(scoreMath<7 && scoreFizik<7){
+                System.out.println("Студент не сможет учиться ни в одном классе");
+                noChoice++;
+            }
+            Delimetr.delmin(25);
+        }
+        System.out.println("Физико-Матетический "+mathFizik+" человек");
+        System.out.println("Физико-Информационный "+infoFizik+" человек");
+        System.out.println("Студенты которые могут поступить на оба потока "+doubleChance);
+        System.out.println("Студенты которые не смогут учится ни по одной программе "+noChoice);
+    }
+    public static void zadanie_13_32(){
+        String s = "Принимает число слогаемых в ряду Эйлера";
+        System.out.println(s);
+        Delimetr.deleq(s.length());
+        double Pi = 3.14;
+        double summ=0;
+        System.out.print("Введите число слогаемых-->");
+        int num = scn.nextInt();
+        for(int i=1;i<=num;i++){
+            summ += (1/Math.pow(i,2));
+        }
+        System.out.println("Ряд Эйлера-->"+summ);
+        System.out.print(Pi/num);
+        //Работает но,явно не так как должно...
+    }
+    public static void zadanie_13_33(){
+        String s = "Принимает число слогаемых в ряду Махадевы-Эйлера и вычисляет значение числа ПИ";
+        System.out.println(s);
+        Delimetr.deleq(s.length());
+        System.out.print("Введите число слогаемых-->");
+        int num = scn.nextInt();
+        int alpha = 1;
+        double summ = 0;
+        for(int i=1;i<=num;i++){
+            if(i%2==1){
+                summ+=4.0/alpha;
+            }else
+                summ-=4.0/alpha;
+            alpha+=2;
+        }
+        Delimetr.delsharp(1);
+        System.out.print(summ);
     }
 }
