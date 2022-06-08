@@ -3,13 +3,14 @@ import Razdel11.Glava11;
 import Razdel12.Glava12;
 import Razdel13.Glava13;
 import Razdel14.Glalva14;
+import Razdel15.Glava15;
 
 public class Main {
 
     public static void main(String[]args){
 
        // Glava12.zadanie_12_2();
-         Glalva14.zadanie_14_7();
+        Glava15.zadanie_15_13();
 //        int i=123456;
 //        int num00 = i/100000;
 //        int num0 = (i/10000)%10;

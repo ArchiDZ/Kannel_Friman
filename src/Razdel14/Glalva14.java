@@ -144,4 +144,62 @@ public class Glalva14 {
         System.out.println("max-->"+max);
         System.out.println("summ-->"+sum);
     }
+    public static void zadanie_14_8(){
+        System.out.println("Серия из 20 целых трехзначных чисел, у максимального числа вывести сумму цифр");
+        int max=999;
+        int sum = 0;
+        for (int i=1;i<=20;i++){
+            int num = rnd.nextInt(100,999);
+            System.out.print(num+" ");
+            if(num<max){
+                max=num;
+                int l1 = max/100;
+                int l2 = (max/10)%10;
+                int l3 = max%10;
+                sum=l1+l2+l3;
+            }
+        }
+        System.out.println("max-->"+max);
+        System.out.println("summ-->"+sum);
+    }
+    public static void zadanie_14_9(){
+        String s="Серия из 24 чисел, выводи ряд чисел максимальное число и его порядковый номер в ряду";
+        System.out.println(s);
+        Delimetr.deleq(s.length());
+        int max = 0;
+        int position = 0;
+        for(int i=1;i<=24;i++){
+            int num = rnd.nextInt(1,10000);
+            System.out.print("("+i+")"+num+" ");
+            if(num>max){
+                max=num;
+                position=i;
+            }
+        }
+        System.out.println("Самое большое число-->"+max+" находится на позиции-->"+position);
+    }
+    public static void zadanie_14_10(){
+        String s = "25 целых положительных чисел,выводит на экран сумму цифр которого была максимальной";//не точное описание,делаем отсебятину
+        System.out.println(s);
+        int sum = 0;
+        int max = 0;
+        int max_sum=0;
+        for (int i=1;i<=25;i++){
+            int num = rnd.nextInt(100,999);
+            System.out.print("("+i+")"+num+" ");
+            if(num>max){
+                max=num;
+            }
+            int l1 = num/100;
+            int l2 = (num/10)%10;
+            int l3 = num%10;
+            sum = l1+l2+l3;
+            if(sum>max_sum){
+                max_sum=sum;
+            }
+            System.out.print("("+i+")"+sum+" ");
+        }
+        System.out.print("Максимальное число-->"+max);
+        System.out.print("Максимальная сумма цифр числа-->"+max_sum);
+    }
 }
