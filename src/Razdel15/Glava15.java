@@ -1,6 +1,7 @@
 package Razdel15;
 
 import Tools.Delimetr;
+import Tools.Tool2;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -180,13 +181,79 @@ public class Glava15 {
         }
         System.out.println("кол-во серии-->"+counter);
     }
-    public static void zadanie_15_14(){}
-    public static void zadanie_15_15(){}
+    public static void zadanie_15_14() {
+        String str = "метод который выводит количество цифр в введеном числе";
+        System.out.println(str);
+        Delimetr.deleq(str.length());
+        System.out.print("-->");
+        int number = sc.nextInt();
+        int counter = 0;
+        while (number > 0) {
+            number /= 10;
+            counter++;
+        }
+        System.out.println("Кол-во цифр в числе-->" + counter);
+
+    }
+    public static void zadanie_15_15(){
+        String str = "метод который выводит количество четных цифр в введеном числе";
+        System.out.println(str);
+        Delimetr.deleq(str.length());
+        System.out.print("-->");
+        int number = sc.nextInt();
+        int counter = 0;
+        while (number > 0) {
+             number /=10;
+            if (number%2==0){
+                counter++;
+            }
+        }
+        System.out.println("Кол-во цифр в числе-->" + counter);
+        //Реализация не правильная нужно по выводить проверку на количество цифр
+        // от туда перекидывать на другой метод
+    }
     public static void zadanie_15_16(){}
     public static void zadanie_15_17(){}
-    public static void zadanie_15_18(){}
-    public static void zadanie_15_19(){}
-    public static void zadanie_15_20(){}
+    public static void zadanie_15_18(){
+    String s = "Метод который принимает с клавиатуры число и выводит на экран все числа " +
+        "которые можно получить из введеного числа путем стирания";
+    System.out.println(s);
+    Delimetr.deleq(s.length());
+    System.out.print("-->");
+    int number = sc.nextInt();
+    while (number>0){
+        number/=10;
+        System.out.print(number+" ");
+    }
+    }
+    public static void zadanie_15_19(){
+        String str1 = "Метод который генерирует серию 15 чисел";
+        System.out.println(str1);
+        Delimetr.deleq(str1.length());
+        Tool2 tool = new Tool2();
+        int counter = 0;
+        int sum = 0;
+        while (counter<16){
+            int number = rnd.nextInt(10,99);
+            tool.twoDec(number);
+            sum = tool.getNum1()+ tool.getNum2();
+            System.out.println(number+"| "+tool.getNum1()+" + "+tool.getNum2()+" |-->"+sum);
+            counter++;
+        }
+    }
+    public static void zadanie_15_20(){
+        String s = "Метод который выводит целые положительные числа пока сумма" +
+                "цифр не станет больше или ровна 15";
+        System.out.print(s);
+        Delimetr.deleq(s.length());
+        int sum = 0;
+        while (sum<15){
+            int num = rnd.nextInt(1,9);
+            sum+=num;
+            System.out.print(num+"-");
+        }
+        System.out.println("Конец цикла--"+sum);
+    }
     public static void zadanie_15_21(){}
     public static void zadanie_15_22(){}
     public static void zadanie_15_23(){}

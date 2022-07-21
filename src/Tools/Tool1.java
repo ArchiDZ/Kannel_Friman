@@ -1,6 +1,8 @@
 package Tools;
 
 public class Tool1 {
+    private int number;
+
     public static void week(int day){
 
         switch (day){
@@ -29,4 +31,8 @@ public class Tool1 {
         }
 
     }
-}
+
+
+
+    }
+
