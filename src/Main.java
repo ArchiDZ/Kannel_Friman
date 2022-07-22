@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[]args){
 
        // Glava12.zadanie_12_2();
-       Glava15.zadanie_15_20();
+       Glava15.zadanie_15_22();
         //Tool6 foo = new Tool6();
         //foo.sixDec(123456);
         //System.out.println(foo.getNum1()+" "+foo.getNum2()+" "

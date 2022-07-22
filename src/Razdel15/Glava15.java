@@ -255,7 +255,26 @@ public class Glava15 {
         System.out.println("Конец цикла--"+sum);
     }
     public static void zadanie_15_21(){}
-    public static void zadanie_15_22(){}
+    public static void zadanie_15_22(){
+        String s = "Метод который выводит 15 положительных чисел. Для каждого числа " +
+                "выдает сумму цифр. Также выводит порядковый номер и самую большую цифру";
+        int sum = 0;
+        int position = 1;
+        int max = 0;
+        for(int i = 1;i<16;i++){
+            int number = rnd.nextInt(1,999);
+           System.out.print("#"+number);
+            while(number>0){
+                sum+=number%10;
+                number/=10;
+            }
+            if (sum>max)
+                position = i;
+            System.out.println("--"+sum+"--");
+        }
+        System.out.println("pos-->"+position);
+//какойто книжный бред--->пример из книги работает не правильно
+    }
     public static void zadanie_15_23(){}
     public static void zadanie_15_24(){}
     public static void zadanie_15_25(){}
