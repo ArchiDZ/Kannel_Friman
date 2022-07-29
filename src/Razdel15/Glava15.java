@@ -26,6 +26,7 @@ public class Glava15 {
                 System.out.println("Минус");
             num= sc.nextInt();
         }
+        //29284668
     }
     public static void zadanie_15_5(){
         String s = "Выводит числа пока не будет сгенерировано число 999";
@@ -275,11 +276,106 @@ public class Glava15 {
         System.out.println("pos-->"+position);
 //какойто книжный бред--->пример из книги работает не правильно
     }
-    public static void zadanie_15_23(){}
-    public static void zadanie_15_24(){}
-    public static void zadanie_15_25(){}
-    public static void zadanie_15_26(){}
-    public static void zadanie_15_27(){}
+    public static void zadanie_15_23() {
+        String s1 = "Метод который принимает с клавиатуры целое число и делит их на четные и не четные числа";
+        System.out.print(s1);
+        Delimetr.deleq(s1.length());
+        System.out.println("-->");
+        int chet = 0;
+        int notChet = 0;
+        int newNum = 0;
+        int tempN = 0;
+
+        int number = sc.nextInt();
+        tempN = number;
+        while (number > 0) {
+            newNum = number % 10;
+            if (newNum % 2 == 0) {
+                chet = newNum;
+                System.out.print(" " + chet);
+            }
+            number /= 10;
+        }
+        while (tempN > 0) {
+            newNum = tempN % 10;
+            if (newNum % 2 != 0) {
+                notChet = newNum;
+                System.out.print(" " + notChet);
+            }
+            tempN /= 10;
+        }
+
+    }
+    public static void zadanie_15_24(){
+        /*
+        * точно такоеже задание как и предыдущее
+        * */
+
+    }
+    public static void zadanie_15_25(){
+        String str = "Метод который принимает с клавиатуры целое положительное\n " +
+                "число, и выводит на экран его первую цифру";
+        System.out.println(str);
+        Delimetr.deleq(str.length()/2);
+        System.out.print("-->");
+        int number =sc.nextInt();
+        int num = 0;
+        while (number>0){
+           num = number%10;
+           number/=10;
+        }
+        System.out.println("last-->"+num);
+    }
+    public static void zadanie_15_26(){
+        String s = "Метод который принимает число затем генерирует случайную цифру,\n и проверяет встречается" +
+                "ли эта цифра в введенном числе.";
+        System.out.println(s);
+        Delimetr.deleq(s.length()/2);
+        System.out.print("-->");
+        int flag = 0;
+        int number = sc.nextInt();
+        int digit = rnd.nextInt(0,9);
+        System.out.println("Случайное число-->"+digit);
+        while (number>0){
+            if(number%10==digit && flag==0)
+                flag = 1;
+                number/=10;
+            }
+                if(flag==1){
+                    System.out.println("Да");
+                }else
+                    System.out.print("Нет");
+
+    }
+    public static void zadanie_15_27(){
+        String str = "Метод который принимает число затем генерирует случайную цифру,и проверяет встречается\n" +
+                " ли эта цифра в введенном числе. Сколько раз и на какой позиции ";
+        System.out.println(str);
+        Delimetr.deleq(str.length()/2);
+        int digit = rnd.nextInt(0,9);
+        System.out.println("Случайное число-->"+digit);
+        System.out.print("Введите число-->");
+        int number = sc.nextInt();
+        int flag = 0;
+
+        int position = 0;
+        int counter = 0;
+
+        while (number>0){
+            if(number%10==digit && flag == 0)
+                flag = 1;
+                counter++;
+                position+=1;
+
+            number/=10;
+        }
+        if (flag==1){
+            System.out.println("Число "+digit+" встречается "+counter+" позиция "+position);
+        }
+        else
+            System.out.println("Нет совпадений");
+
+    }
     public static void zadanie_15_28(){}
     public static void zadanie_15_29(){}
     public static void zadanie_15_30(){}
