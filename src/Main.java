@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[]args){
 
        // Glava12.zadanie_12_2();
-        Glava16.zadanie_16_5();
+        Glava16.zadanie_16_6();
         //Tool6 foo = new Tool6();
         //foo.sixDec(123456);
         //System.out.println(foo.getNum1()+" "+foo.getNum2()+" "
