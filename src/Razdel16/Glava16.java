@@ -78,16 +78,12 @@ public class Glava16 {
         String s = "Метод который будет выводить сумму всех делителей каждого числа от 1 до 75";
         System.out.println(s);
         Delimetr.deleq(s.length());
-        //int sum = 0;
         for(int i = 1; i<=75;i++){
             System.out.print(i+"-->");
             for (int j=1;j<=i/2;j++){
                 int sum = 0;
                 if (i%j==0){
-                    //sum+=j;//j+=j;
                     System.out.print(j+" ");
-                   // sum+=j;
-                   // System.out.print("|->"+sum);
                 }
             }
             System.out.println();
