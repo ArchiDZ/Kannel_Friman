@@ -5,14 +5,17 @@ import Razdel13.Glava13;
 import Razdel14.Glalva14;
 import Razdel15.Glava15;
 import Razdel16.Glava16;
+import Razdel17.Excer_17_36;
 import Tools.*;
 
 public class Main {
 
     public static void main(String[]args){
 
+        Glava16.zadanie_16_10();
+
        // Glava12.zadanie_12_2();
-        Glava15.zadanie_15_35();
+       // Glava15.zadanie_15_35();
         //Tool6 foo = new Tool6();
         //foo.sixDec(123456);
         //System.out.println(foo.getNum1()+" "+foo.getNum2()+" "

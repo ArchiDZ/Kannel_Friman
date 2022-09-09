@@ -2,7 +2,10 @@ package Razdel16;
 
 import Tools.Delimetr;
 
+import java.util.Scanner;
+
 public class Glava16 {
+    public static Scanner scan = new Scanner(System.in);
     public static void zadanie_16_1(){
         for(int i = 0;i<4;i++){
             for(int j=0;j<5;j++){
@@ -89,6 +92,84 @@ public class Glava16 {
             System.out.println();
         }
     }
+    public static void zadanie_16_9(){
+        String s = "Метод который выводит изображение делимости чисел от 1 до N ";
+        System.out.println(s);
+        Delimetr.deleq(s.length());
+        for(int i=1;i<=10;i++){
+            System.out.print(i+":");
+            for (int j=1;j<=i;j++){
+                if(i%j==0) {
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+    }
+    public static void zadanie_16_10(){
+        String s = "Целое число считается полноценным если сумма делителей включая 1" +
+                "но не включая само число,равна самому числу";
+        System.out.println(s);
+        Delimetr.deleq(s.length());
+        for(int i=1;i<=10000;i++){
+            int sum = 0;
+            for(int j=1;j<i;j++){
+                if(i%j==0){
+                    sum+=j;
+                    if(sum == i){
+                        System.out.println(i+"="+sum+"|");
+                    }
+                }
+            }
+        }
+    }
+
+    public static void zadanie_16_11(){
+        String s = "Метод который принимает с клавиатуры целое число" +
+                "а затем проверяет можно ли это число представить в виде " +
+                "суммы квадратов";
+        System.out.println(s);
+        Delimetr.deleq(s.length());
+        int flag= 0;
+        System.out.print("-->");
+        int x = scan.nextInt();
+        for(int i = 1;i<=x/2;i++){
+            for(int j = 1;j<=i;j++){
+                if((i*i+j*j)==x){
+                    System.out.println(i*i+"+"+j*j);
+                    flag = 1;
+                }
+            }
+            if (flag==1)
+                System.out.println("YES");
+            else System.out.println("NO");
+        }
+    }
+    public static void zadanie_16_12(){
+        String s = "Метод который находит натуральное число от 1 до 10000 с максимальной суммой делителей";
+        System.out.println(s);
+        Delimetr.deleq(s.length());
+        int max = 0;
+        for(int i = 1; i<10000;i++){
+            System.out.println(i+":");
+            int sum = 0;
+            for (int j = 1;j<i;j++){
+                if(j%j==0){
+                    sum+=j;
+                    if(sum>max){
+                        max=sum;
+                        System.out.println(max);
+                }
+
+                }
+            }
+        }
+        //System.out.println("Maximum-->"+max);
+    }
+
+
+
+
 
 
 }
