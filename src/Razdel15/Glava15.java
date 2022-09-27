@@ -3,6 +3,7 @@ package Razdel15;
 import Tools.Delimetr;
 import Tools.Tool2;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -280,14 +281,32 @@ public class Glava15 {
                 " четные и нечетные числа в разаных строках";
         System.out.println(str);
         Delimetr.deleq(str.length());
+        StringBuilder chet = new StringBuilder();
+        StringBuilder nechet= new StringBuilder();
         System.out.print("-->");
         int number = sc.nextInt();
-        while (number>0){
-
+        while (number!=0){
+           int k = number%10;
+           number/=10;
+           if (k%2==0){
+               chet.insert(0,k+" ");//System.out.print(k);
+           }
+            else
+               nechet.insert(0,k+" ");
         }
+        System.out.println(chet);
+        System.out.println(nechet);
+
     }
     public static void zadanie_15_24(){}
-    public static void zadanie_15_25(){}
+    public static void zadanie_15_25(){
+        /*Метод который принимает с клавиатуры целое положительное число и выводит его первую цифру
+        * */
+        Delimetr.deleq(25);
+        System.out.println("-->");
+        int number = sc.nextInt();
+
+    }
     public static void zadanie_15_26(){}
     public static void zadanie_15_27(){}
     public static void zadanie_15_28(){}

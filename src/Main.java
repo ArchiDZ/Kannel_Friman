@@ -12,7 +12,7 @@ public class Main {
 
     public static void main(String[]args){
 
-        Glava16.zadanie_16_10();
+        Glava15.zadanie_15_23();
 
        // Glava12.zadanie_12_2();
        // Glava15.zadanie_15_35();
