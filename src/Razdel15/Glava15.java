@@ -298,17 +298,74 @@ public class Glava15 {
         System.out.println(nechet);
 
     }
-    public static void zadanie_15_24(){}
+    public static void zadanie_15_24(){
+        /*Точно такая же задача как и 15.23
+        * */
+    }
     public static void zadanie_15_25(){
         /*Метод который принимает с клавиатуры целое положительное число и выводит его первую цифру
         * */
         Delimetr.deleq(25);
         System.out.println("-->");
         int number = sc.nextInt();
+        int k = 0;
+        while(number!=0){
+           k= number%10;
+            number/=10;
+        }
+        System.out.println(k);
+    }
+    public static void zadanie_15_26(){
+        /*Метод который принимает с клавиатуры целое положительное число а затем генерирует случайную цифру
+        * Метод должен определить встречается ли эта цифра в введенном числе, и вывести сообщение о результате.*/
+        Delimetr.deleq(20);
+        System.out.print("-->");
+        int number = sc.nextInt();
+        int digit = rnd.nextInt(1,9);
+        boolean isMatch = false;
+        int counter = 0;
+        System.out.println("digit--->"+digit);
+        while (number!=0){
+            int k = number%10;
+            number/=10;
+            if (k==digit){
+                isMatch = true;
+                counter++;
+            }
+        }
+        if(isMatch==true){
+            System.out.println("There is a match "+counter+" times");
+        }else System.out.println("No matches");
 
     }
-    public static void zadanie_15_26(){}
-    public static void zadanie_15_27(){}
+    public static void zadanie_15_27(){
+        /*Метод который принимает с клавиатуры целое положительное число а затем генерирует случайную цифру
+         * Метод должен определить встречается ли эта цифра в введенном числе, и вывести сообщение о результате.
+         * Сколлько раз и на какой позиции.*/
+        Delimetr.deleq(20);
+        System.out.print("-->");
+        int number = sc.nextInt();
+        int digit = rnd.nextInt(1,9);
+        StringBuilder position = new StringBuilder();
+        int step=0;
+        boolean isMatch = false;
+        int counter = 0;
+        System.out.println("digit--->"+digit);
+        while (number!=0){
+            step++;
+            int k = number%10;
+            number/=10;
+            if (k==digit){
+                isMatch = true;
+                counter++;
+                position.insert(0,step+" ");
+            }
+        }
+        if(isMatch==true){
+            System.out.println("There is a match "+counter+" times on position "+position);
+        }else System.out.println("No matches");
+    // не совсем корректно позиция учитывается от последнего числа
+    }
     public static void zadanie_15_28(){}
     public static void zadanie_15_29(){}
     public static void zadanie_15_30(){}
