@@ -366,8 +366,30 @@ public class Glava15 {
         }else System.out.println("No matches");
     // не совсем корректно позиция учитывается от последнего числа
     }
-    public static void zadanie_15_28(){}
-    public static void zadanie_15_29(){}
+    public static void zadanie_15_28(){
+        /* метод который принимает число с клавиатуры и определяет количество символов*/
+        System.out.print("-->");
+        int number = sc.nextInt();
+        int step_counter = 0;
+        while (number!=0){
+            int k = number%10;
+            number/=10;
+            step_counter++;
+        }
+        System.out.println(" Digits in number -->"+step_counter);
+    }
+    public static void zadanie_15_29(){
+        /*Метод который принимает с клавиатуры число и выводит сумму цифр от введенного числа */
+        System.out.print("-->");
+        int number = sc.nextInt();
+        int k = 0;
+        while (number!=0){
+             k += number%10;
+
+            number/=10;
+        }
+        System.out.println(k);
+    }
     public static void zadanie_15_30(){}
     public static void zadanie_15_31(){}
     public static void zadanie_15_32(){}
