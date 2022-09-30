@@ -390,9 +390,58 @@ public class Glava15 {
         }
         System.out.println(k);
     }
-    public static void zadanie_15_30(){}
-    public static void zadanie_15_31(){}
-    public static void zadanie_15_32(){}
+    public static void zadanie_15_30(){
+        /*Метод который генерирует случайное число и подсчитывает сколько нулей в данном числе*/
+        int number = rnd.nextInt(1,100000);
+        System.out.println("--"+number+"--");
+        int k = 0;
+        int zero_counter = 0;
+        while (number!=0){
+            k = number%10;
+            if (k==0){
+                zero_counter++;
+            }
+            number/=10;
+        }
+        System.out.println("zero in number-->"+zero_counter);
+    }
+    public static void zadanie_15_31(){
+        /*Метод которй принимает с клавиатуры серию целых чисел до тех пор пока, кол-во четных чисел в
+        серии остается меньше 5*/
+
+        System.out.println("Start enter series of numbers");
+        int counter = 0;
+        StringBuilder enterNumber = new StringBuilder();
+        while (counter !=5){
+            System.out.print("-->");
+            int number = sc.nextInt();
+            enterNumber.insert(0,number+" ");
+            if(number%2==0){
+                counter++;
+            }
+        }
+        System.out.println(enterNumber);
+    }
+    public static void zadanie_15_32(){
+        /*Метод который принимает с клавиатуры серию чисел до тех пор пока,
+        кол-во четных чисел на нечетных местах серии остается меньше 5*/
+
+        int counter = 0;
+        int position = 0;
+        StringBuilder enteredNumbers = new StringBuilder();
+        while (counter!=5){
+            System.out.print("-->");
+            int number = sc.nextInt();
+            enteredNumbers.insert(0,"["+number+"]("+position+") ");
+            if(position%2!=0){
+                if(number%2==0){
+                    counter++;
+                }
+            }
+            position++;
+        }
+        System.out.println(enteredNumbers);
+    }
     public static void zadanie_15_33(){}
     public static void zadanie_15_34(){}
     public static void zadanie_15_35(){
