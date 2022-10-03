@@ -1,18 +1,15 @@
-import Razdel10.Glava10;
-import Razdel11.Glava11;
-import Razdel12.Glava12;
-import Razdel13.Glava13;
-import Razdel14.Glalva14;
-import Razdel15.Glava15;
-import Razdel16.Glava16;
-import Razdel17.Excer_17_36;
-import Tools.*;
+import ExerciseForCoding.Glava1.G1_2;
+import Zlatpol.Glava1.GL1;
 
 public class Main {
 
     public static void main(String[]args){
 
-        Glava15.zadanie_15_32();
+        //Glava15.zadanie_15_32();
+
+
+        GL1.z_1_1();
+
 
        // Glava12.zadanie_12_2();
        // Glava15.zadanie_15_35();
