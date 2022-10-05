@@ -1,4 +1,5 @@
 import ExerciseForCoding.Glava1.G1_2;
+import Tools.Choser;
 import Zlatpol.Glava1.GL1;
 
 public class Main {
@@ -7,8 +8,10 @@ public class Main {
 
         //Glava15.zadanie_15_32();
 
+        //Choser.knigaVibiratel();
+        Choser.zadanieVibiratel(Choser.knigaVibiratel());
+       // GL1.z_1_1();
 
-        GL1.z_1_1();
 
 
        // Glava12.zadanie_12_2();
