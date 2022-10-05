@@ -1,3 +1,4 @@
+import BookKannnel.Razdel1.Razdel15.Glava15;
 import ExerciseForCoding.Glava1.G1_2;
 import Tools.Choser;
 import Zlatpol.Glava1.GL1;
@@ -6,16 +7,15 @@ public class Main {
 
     public static void main(String[]args){
 
-        //Glava15.zadanie_15_32();
-
-        //Choser.knigaVibiratel();
-        Choser.zadanieVibiratel(Choser.knigaVibiratel());
-       // GL1.z_1_1();
+        Glava15.zadanie_15_42();
 
 
+        //Choser.zadanieVibiratel();
 
-       // Glava12.zadanie_12_2();
-       // Glava15.zadanie_15_35();
+
+
+
+
         //Tool6 foo = new Tool6();
         //foo.sixDec(123456);
         //System.out.println(foo.getNum1()+" "+foo.getNum2()+" "

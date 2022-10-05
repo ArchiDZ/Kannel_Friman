@@ -100,14 +100,15 @@ public class Choser {
     //14 глав 1400 задач
     public static int knigaVibiratel (){
         int viborKnigi = rnd.nextInt(0,book.length);
-        System.out.println("Книга на сегодня-->"+book[viborKnigi]+"("+viborKnigi+")");
+        System.out.println("Книга на сегодня-->"+book[viborKnigi]);
         return viborKnigi;
     }
-    public static void zadanieVibiratel (int kniga ){
+    public static void zadanieVibiratel ( ){
         int zadanie = 0;
-        kniga = knigaVibiratel();
+        int kniga = knigaVibiratel();
         if(kniga == 0){
             zadanie = rnd.nextInt(1,1052);
+            System.out.println("Ваша задание на сегодня-->"+zadanie);
         } else if(kniga == 1){
            int glava = rnd.nextInt(15,22);
            switch (glava){
@@ -128,7 +129,54 @@ public class Choser {
                case 22: zadanie = rnd.nextInt(0,KF_g22.length);
                    break;
            }
-            System.out.println("Выполнить-->"+glava+"  "+zadanie);
+            System.out.println("Выполнить задание-->"+zadanie+" из главы "+glava);
+        }else if(kniga==2){
+            int glava = rnd.nextInt(1,14);
+            switch (glava){
+                case 1:
+                    zadanie = rnd.nextInt(1,17);
+                    break;
+                case 2:
+                    zadanie = rnd.nextInt(1,38);
+                    break;
+                case 3:
+                    zadanie = rnd.nextInt(1,51);
+                    break;
+                case 4:
+                    zadanie = rnd.nextInt(1,145);
+                    break;
+                case 5:
+                    zadanie = rnd.nextInt(1,94);
+                    break;
+                case 6:
+                    zadanie = rnd.nextInt(1,83);
+                    break;
+                case 7:
+                    zadanie = rnd.nextInt(1,181);
+                    break;
+                case 8:
+                    zadanie = rnd.nextInt(1,19);
+                    break;
+                case 9:
+                    zadanie = rnd.nextInt(1,54);
+                    break;
+                case 10:
+                    zadanie = rnd.nextInt(1,28);
+                    break;
+                case 11:
+                    zadanie = rnd.nextInt(1,261);
+                    break;
+                case 12:
+                    zadanie = rnd.nextInt(1,199);
+                    break;
+                case 13:
+                    zadanie = rnd.nextInt(1,61);
+                    break;
+                case 14:
+                    zadanie = rnd.nextInt(1,40);
+                    break;
+            }
+            System.out.println("Ваше задание на сегодня "+zadanie+" из главы "+glava);
         }
     }
 

@@ -460,11 +460,100 @@ public class Glava15 {
     }
     public static void zadanie_15_36(){}
     public static void zadanie_15_37(){}
-    public static void zadanie_15_38(){}
-    public static void zadanie_15_39(){}
-    public static void zadanie_15_40(){}
-    public static void zadanie_15_41(){}
-    public static void zadanie_15_42(){}
+    public static void zadanie_15_38(){
+        /*Метод который находит наибольшее положительное двузначное число ,
+        которое делится на произведение своих цифр*/
+        int a = 99;
+        int b = (a/10)*(a%10);
+        while (b!=0 && a%b!=0){
+            a--;
+            b=(a/10)*(a%10);
+        }
+        System.out.println(a);
+    }
+    public static void zadanie_15_39(){
+        /*Метод который принимает число с клавиатуры
+        и находит его наименьший делитель отличный от 1*/
+        System.out.print("-->");
+        int number = sc.nextInt();
+        int step = 0;
+        int tmp = 0;
+        StringBuilder str = new StringBuilder();
+        while(number !=step){
+            step++;
+            if(number%step==0){
+                tmp = step;
+                str.insert(0,step+" ");
+            }
+        }
+        System.out.println("Список делителей: ");
+        System.out.println(str);
+        System.out.println(tmp);
+        //Выводит список делителей но наименьший
+
+    }
+    public static void zadanie_15_40(){
+        /*Метод который принимает с клавиатуры число
+        и находит наибольший делитель числа*/
+        System.out.print("-->");
+        int number = sc.nextInt();
+        int step = 0;
+        int tmp = 0;
+        StringBuilder str = new StringBuilder();
+        while(number !=step){
+            step++;
+            if(number%step==0){
+                tmp = step;
+                str.insert(0,step+" ");
+            }
+        }
+        System.out.println("Список делителей: ");
+        System.out.println(str);
+        System.out.println("Наибольший делитель-->"+tmp);
+    }
+    public static void zadanie_15_41(){
+        /*метод преобразования числа.Принимает с клавиатуры  2 целох положительныз числа
+        И преобразует большее из них в меньшее следующим образом.
+        * Преобразование: -если число нечетное,оно уменьшается на 1
+        *                 -если число четное оно делится на 2
+        * Все преобразования с числом записываются*/
+        System.out.println("-->");
+        int number = sc.nextInt();
+        int number2 = sc.nextInt();
+        StringBuilder str = new StringBuilder();
+        while (number!=0){
+            if(number%2!=0){
+                number--;
+            } else if (number%2==0) {
+                number/=2;
+            }
+            str.insert(0,number+" ");
+        }
+        System.out.println(str.reverse());
+    }
+    public static void zadanie_15_42(){
+        /*Последовательность Фибоначчи определяется как серия чисел в которой первый и второй
+        * члены равны 1 , а любой член , начиная с третьего  равен сумме двух предыдущих*/
+        int a=1;
+        int a2 = 1;
+        int a3=0;
+        int x= sc.nextInt();
+        if (x==1){
+            System.out.println("Является");
+        }
+        a3=a+a2;
+        while (x>a3){
+            a=a2;
+            a2=a3;
+            a3=a+a2;
+            System.out.println(a3+" ");
+        }
+        System.out.println();
+        if(x==a3){
+            System.out.println("Является");
+        }else
+            System.out.println("Нет");
+    }
     public static void zadanie_15_43(){}
     public static void zadanie_15_44(){}
     public static void zadanie_15_45(){}
