@@ -441,8 +441,35 @@ public class Glava15 {
         }
         System.out.println(enteredNumbers);
     }
-    public static void zadanie_15_33(){}
-    public static void zadanie_15_34(){}
+    public static void zadanie_15_33(){
+        /*Метод который принимает с клавиатуры целое число,
+        и выводит на экран серию переменной в степени*/
+        System.out.print("-->");
+        int number = sc.nextInt();
+        int step =1;
+        int x = 0;
+        while (x<1000){
+            step++;
+            x = (int)Math.pow(number,step);
+            System.out.print(x+" ");
+        }
+    }
+    public static void zadanie_15_34(){
+        /*Метод который принимает с клавиатуры целое положительное число
+        * Метод должен определить наибольшее значение в серии, сумма которой
+        * не превышает Х*/
+        int step=1;
+        int summ = 0;
+        System.out.print("-->");
+        int number = sc.nextInt();
+        while (summ<=number){
+            step++;
+            summ+=step*step;
+            System.out.println(step+"("+summ+")");
+        }
+        System.out.println();
+        System.out.println(step-1);
+    }
     public static void zadanie_15_35(){
         String s = "Метод который принимает с клавиатуры целое число\n" +
                 "и строит из него число с обратным порядком цифр.";
@@ -458,8 +485,38 @@ public class Glava15 {
         }
         //System.out.println(sb+" ");
     }
-    public static void zadanie_15_36(){}
-    public static void zadanie_15_37(){}
+    public static void zadanie_15_36(){
+        /*Метод который принимает с клавиатуры целое число
+        * и определяет является ли оно точным квадратом целого числа*/
+        System.out.print("-->");
+        int number = sc.nextInt();
+        int step = 1;
+        int X = 1;
+        while (number != X){
+        step++;
+        X = (int)Math.pow(step,2);
+        }
+        if (X==number){
+            System.out.println("Является");
+        }else System.out.println("Неявляется");
+    }
+    public static void zadanie_15_37() {
+        /*Метод который принимает с клавиатуры целое положительное число Х,
+         * метод должен найти наименьшее целое положительное двузначное
+         * число,сумма цифр которого равна Х*/
+        System.out.print("-->");
+        int number = sc.nextInt();
+        int digit = 10;
+        int sum = 0;
+        while (digit < 99) {
+            sum = (digit / 10) + (digit % 10);
+            digit++;
+            if (sum == number) {
+                System.out.println("Есть совпадение");
+                //break;
+            }
+        }
+    }
     public static void zadanie_15_38(){
         /*Метод который находит наибольшее положительное двузначное число ,
         которое делится на произведение своих цифр*/
@@ -554,7 +611,24 @@ public class Glava15 {
         }else
             System.out.println("Нет");
     }
-    public static void zadanie_15_43(){}
+    public static void zadanie_15_43(){
+        /*YНаибольший общий делитель (НОД) двух целых чисел можно
+        * определить при помощи следующего метода:Большее число
+        * уменьшается на значение меньшего до тех пор пока числа
+        * не оказываются равными
+        * Метод который принимает с клавиатуры 2 целых положительных
+        * числа и определяет их НОД описанным методом*/
+
+        System.out.print("1)-->");
+        int num1 = sc.nextInt();
+        System.out.println("2)-->");
+        int num2 = sc.nextInt();
+        if(num1>num2){
+         while (num1!=num2){
+
+         }
+        }
+    }
     public static void zadanie_15_44(){}
     public static void zadanie_15_45(){}
     public static void zadanie_15_46(){}
@@ -563,6 +637,23 @@ public class Glava15 {
     public static void zadanie_15_49(){}
     public static void zadanie_15_50(){}
     public static void zadanie_15_51(){}
-    public static void zadanie_15_52(){}
+    public static void zadanie_15_52(){
+        /*Игра в кости. 2 игрока. игра заканчивается если 1 игрок набрал 100 очков*/
+        int scorePlayer1 = 0;
+        int scorePlayer2 = 0;
+        while (scorePlayer1<100 || scorePlayer2 < 100) {
+            int player1_kub1 = rnd.nextInt(1, 6);
+            int player1_kub2 = rnd.nextInt(1,6);
+            scorePlayer1 += player1_kub1+player1_kub2;
+            System.out.println("1)--"+player1_kub1+"--"+player1_kub2+"--score="+scorePlayer1);
+            int player2_kub1 = rnd.nextInt(1, 6);
+            int player2_kub2 = rnd.nextInt(1,6);
+            scorePlayer2 += player2_kub1+player2_kub2;
+            System.out.println("2)--"+player2_kub1+"--"+player2_kub2+"--score="+scorePlayer2);
+        }
+        if(scorePlayer1>=100){
+            System.out.println("Игрок 1 победил");
+        }else System.out.println("Игрок 2 победил");
+        }
 
 }

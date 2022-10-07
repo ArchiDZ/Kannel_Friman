@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[]args){
 
-        Glava15.zadanie_15_42();
+        Glava15.zadanie_15_37();
 
 
         //Choser.zadanieVibiratel();
