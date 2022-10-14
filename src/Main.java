@@ -1,4 +1,5 @@
 import BookKannnel.Razdel1.Razdel15.Glava15;
+import BookKannnel.Razdel1.Razdel18.Glava18;
 import ExerciseForCoding.Glava1.G1_2;
 import Tools.Choser;
 import Zlatpol.Glava1.GL1;
@@ -7,7 +8,7 @@ public class Main {
 
     public static void main(String[]args){
 
-        Glava15.zadanie_15_37();
+        Glava18.zadanie_18_15();
 
 
         //Choser.zadanieVibiratel();

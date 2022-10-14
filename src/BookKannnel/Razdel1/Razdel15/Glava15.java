@@ -624,14 +624,95 @@ public class Glava15 {
         System.out.println("2)-->");
         int num2 = sc.nextInt();
         if(num1>num2){
-         while (num1!=num2){
-
+         while (num1>num2){
+            num1-=num2;
+            if (num1==num2){
+                System.out.println("Ok(N1)");
+                break;
+            }
+            else if(num1<num2){
+                System.out.println("NG(N1)");
+            break;
+            }
          }
-        }
+        }else
+            while (num1<num2){
+               num2-=num1;
+                if (num1==num2){
+                    System.out.println("Ok(N2)");
+                    break;
+                }
+                else if(num1>num2){
+                    System.out.println("NG(N2)");
+                break;
+                }
+            }
+
     }
-    public static void zadanie_15_44(){}
-    public static void zadanie_15_45(){}
-    public static void zadanie_15_46(){}
+    public static void zadanie_15_44(){
+        /*Наибольший общий делитель (НОД) двух целых положительных чисел
+        * можно определить по алгоритму Евклида: НОД чисел Х и У равен
+        * НОД меньшего из чисел и остатка от деления большего числа на меньшее*/
+        int num1 = rnd.nextInt(1,999);
+        int num2 = rnd.nextInt(1,999);
+        int ost = 0;
+        System.out.println("Число 1-->"+num1);
+        System.out.println("Число 2-->"+num2);
+        if (num1>num2){
+          ost = num1%num2;
+        }else ost=num2%num1;
+        System.out.println(ost);
+    }
+    public static void zadanie_15_45(){
+        /*Метод который принимает с клавиатуры положительное число для переменной
+        * Х и вещественное число для переменной У
+        * Метод будет заменять значение переменной Х на квадратный корень
+        * из значения переменной до тех пор пока значение переменной Х будет
+        * больше на 1 величину  первышающую значение У
+        * Метод выводит на экран все промежуточные значения и оперделить количество
+        * операций*/
+        double number = rnd.nextInt(1,999);
+        System.out.println("Случайное число "+number);
+        System.out.print("-->");
+        double x = sc.nextDouble();
+        int count = 0;
+        while (number>x){
+            count++;
+            number = Math.sqrt(number);
+            System.out.println("# "+number+" ");
+        }
+        System.out.println("Количество итераций--"+count);
+    }
+    public static void zadanie_15_46(){
+        /*В инструкции по использованию лифтом в тоорговом центре написано:
+        * -Не более 6 человек или не более 450 кг
+        * Перед лифтом установлен прибор, который подсчитывает входящих в лифт
+        * и определяет вес до входа в лифт. Прибор автоматически прекращает доступ
+        * к лифту если вход очередного человека может нарушить инструкцию.
+        * Метод должен выводить на экран след информацию:
+        * -кол-во людей вошедших в лифт
+        * --общий их вес
+        * ---Причина по которой прекращен вход людей*/
+
+        System.out.println("Лифт открыт");
+        int maxWeight = 450;
+        double peopleWeigth = 0;
+        int maxPeople = 6;
+        int counter = 0;
+
+        int people = rnd.nextInt(1,10);
+        System.out.println("К лифту подошло-->"+people+" человек");
+        for (int i = 1;i<=people;i++){
+            double weight = rnd.nextDouble(45.0,150.0);//случайный вес человека
+            System.out.println("Пасажир "+i+" Вес: "+ Math.round(weight));
+            peopleWeigth+=weight;
+
+        }
+        System.out.println("Общий вес:"+peopleWeigth);
+
+        //while (counter<=maxPeople || peoplewegth<maxWeight){
+        //}
+    }
     public static void zadanie_15_47(){}
     public static void zadanie_15_48(){}
     public static void zadanie_15_49(){}
