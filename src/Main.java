@@ -1,14 +1,23 @@
 import BookKannnel.Razdel1.Razdel15.Glava15;
 import BookKannnel.Razdel1.Razdel18.Glava18;
+import BookKannnel.Razdel1.Razdel19.Zadanie19_1;
 import ExerciseForCoding.Glava1.G1_2;
 import Tools.Choser;
+import Tools.arrGen;
 import Zlatpol.Glava1.GL1;
 
 public class Main {
 
     public static void main(String[]args){
 
-        Glava18.zadanie_18_15();
+        arrGen foo = new arrGen();
+        for (int i = 0;i<12;i++){
+            foo.arrayGenerator(8);
+        }
+        //foo.arrayGenerator(8);
+        //System.out.println(foo.arrayGenerator(8));
+
+        //Glava18.zadanie_18_18();
 
 
         //Choser.zadanieVibiratel();

@@ -218,6 +218,91 @@ public class Glava18 {
          * размер массива задается с клавиатуры и выводится на экран следующим образом:
          * -в первой строке - четные значения элементов массива
          * --во второй строке - значения  нечетных элементов массива*/
+        System.out.println("Введите размер массива");
+        System.out.print("-->");
+        int num = scn.nextInt();
+        int [] arr = new int[num];
+        StringBuilder chet = new StringBuilder();
+        StringBuilder neChet = new StringBuilder();
+        for(int i =0;i<arr.length;i++){
+            arr[i] = rnd.nextInt(10,99);
+        }
+        Delimetr.deleq(25);
+        System.out.println("!!! Контроль !!!");
+        System.out.println(Arrays.toString(arr));
+        Delimetr.deleq(25);
+        for (int i = 0;i< arr.length;i++){
+            if(arr[i]%2==0){
+                chet.append(arr[i]).append(" ");
+                //chet.insert(0,arr[i]+" "); //Работает но все числа идут в обратном порядке.
+            }else
+                //neChet.insert(0,arr[i]+" "); //Работает но все числа идут в обратном порядке.
+            neChet.append(arr[i]).append(" ");
+        }
+        System.out.println(chet);
+        System.out.println(neChet);
+        scn.close();
+    }
+    public static void zadanie_18_17(){
+        /*Метод который заполняет случайными трехзначными значениями массив
+         * размер массива задается с клавиатуры и выводится на экран следующим образом:
+         * -в каждой строке выводится значенин из двух ячеек семетрично
+         * расположенных к друг другу
+         * Пример 345 455 677 175 985
+         * 345 и 985
+         * 455 и 175
+         * 677*/
+        System.out.println("Введите длинну массива");
+        System.out.println("-->");
+        int x = scn.nextInt();
+        int [] arr = new int [x];
+        for(int i = 0; i<arr.length;i++){
+            arr[i] = rnd.nextInt(100,999);
+        }
+        System.out.println("!!! контроль !!!");
+        System.out.println(Arrays.toString(arr));
+try {
+    if (x % 2 == 0) {//если длинна массива четная то 1 сценарий
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}catch (ArrayIndexOutOfBoundsException ex){
+
+}
+    }
+    public static void zadanie_18_18(){
+        /*Метод который заполняет случайными двузначными значениями массив, размер которого
+        * вводится с клавиатуры. После заполнения метод должен вывести на экран значения след.образом
+        * -- в Первой строке - значения из первой половины массива начиная с начала.
+        * -- во второй строке значения второй половины массива начиная с конца.*/
+        System.out.println("Введите размер массива");
+        System.out.print("-->");
+        int num = scn.nextInt();
+        int [] array = new int[num];
+        for(int i=0;i< array.length;i++){
+            array[i] = rnd.nextInt(9,100);
+        }
+        Delimetr.deleq(25);
+        System.out.println("Массив целиком");
+        System.out.println(Arrays.toString(array));
+        Delimetr.deleq(25);
+        System.out.println("Первая половина массива");
+        for (int i = 0;i< array.length/2;i++){
+            System.out.print(array[i]+" ");
+        }
+        System.out.println();
+        Delimetr.deleq(25);
+        System.out.println("Вторая половина массива");
+        try {
+            for (int i = array.length-1; i >=array.length / 2; i--) {
+                System.out.print(array[i]+" ");
+            }
+        }catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("!!! Внимание выход за приделы массива");
+        }
 
     }
+
+
 }
