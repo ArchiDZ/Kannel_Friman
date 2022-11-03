@@ -1,19 +1,20 @@
 import BookKannnel.Razdel1.Razdel15.Glava15;
+import BookKannnel.Razdel1.Razdel16.Glava16;
 import BookKannnel.Razdel1.Razdel18.Glava18;
 import BookKannnel.Razdel1.Razdel19.Zadanie19_1;
 import ExerciseForCoding.Glava1.G1_2;
 import Tools.Choser;
 import Tools.arrGen;
 import Zlatpol.Glava1.GL1;
+import Zlatpol.Glava1.Glava2;
 
 public class Main {
 
     public static void main(String[]args){
 
-        arrGen foo = new arrGen();
-        for (int i = 0;i<12;i++){
-            foo.arrayGenerator(8);
-        }
+        System.out.println(Glava2.zadacha_2_31(12,5));
+
+        //Glava16.zadanie_16_13();
         //foo.arrayGenerator(8);
         //System.out.println(foo.arrayGenerator(8));
 

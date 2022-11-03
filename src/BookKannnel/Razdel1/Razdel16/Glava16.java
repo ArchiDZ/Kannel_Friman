@@ -167,9 +167,21 @@ public class Glava16 {
         //System.out.println("Maximum-->"+max);
     }
 
+    public static void zadanie_16_13(){
+        /*Метод который выводит на экран простые двузначные числа*/
+
+        for (int i = 9;i<100;i++){
+           for(int j = 1;j<i;j++){
+               if(i%j==0){
+                   System.out.print(i+" ");
+               }
+           }
+            }
+        }
+    }
 
 
 
 
 
-}
+
