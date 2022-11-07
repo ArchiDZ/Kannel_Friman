@@ -1,4 +1,4 @@
-package Zlatpol.Glava1;
+package Zlatpol.Glava2;
 
 import java.util.Random;
 
