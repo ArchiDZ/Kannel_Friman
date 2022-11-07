@@ -1,17 +1,14 @@
-import BookKannnel.Razdel1.Razdel19.Glava19;
-import Zlatpol.Glava2.Glava2;
+import BookKannnel.Razdel1.Razdel15.Glava15;
+import BookKannnel.Razdel1.Razdel18.Glava18;
+import ExerciseForCoding.Glava1.G1_2;
+import Tools.Choser;
+import Zlatpol.Glava1.GL1;
 
 public class Main {
 
     public static void main(String[]args){
 
-        //System.out.println(Glava2.zadacha_2_31(12,5));
-            int [] array = new int[4];
-        Glava19.zadanie_19_10(array);
-        //foo.arrayGenerator(8);
-        //System.out.println(foo.arrayGenerator(8));
-
-        //Glava18.zadanie_18_18();
+        Glava18.zadanie_18_15();
 
 
         //Choser.zadanieVibiratel();
