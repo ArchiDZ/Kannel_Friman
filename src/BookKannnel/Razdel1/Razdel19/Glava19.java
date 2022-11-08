@@ -43,11 +43,26 @@ public class Glava19 {
 
         for (int i = 0; i<arr.length;i++){
             int num = rnd.nextInt(10,99);
-        if (num%3==1){
-            arr[i] = num;
-        }else System.out.println("-->"+num);
+            while (num%3!=1){
+                System.out.println(num);
+                if(num%3==1){
+                    arr[i]=num;
+                }
+                num = rnd.nextInt(10,99);
+            }
+
+         //   arr[i] = num;
         }
         System.out.println(Arrays.toString(arr));
+//Работает но не корректно если число не попало под условие записывает 0
+    }
+    public static void zadanie_19_11(int [] arr){
+        /*Метод который получает в качестве параметра массив и
+        заполняет его положительными случайными двузначными числами
+         у каждой из которых цифра десятков равна цифре едениц*/
+
+        //Пример взят из книги
+
 
     }
 
