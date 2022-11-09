@@ -3,6 +3,8 @@ import BookKannnel.Razdel1.Razdel18.Glava18;
 import BookKannnel.Razdel1.Razdel19.Glava19;
 import ExerciseForCoding.Glava1.G1_2;
 import Tools.Choser;
+import Tools.WtF;
+import Tools.arrGen;
 import Zlatpol.Glava1.GL1;
 import experiment.Person;
 
@@ -10,7 +12,9 @@ public class Main {
 
     public static void main(String[]args){
         int [] array = new int[10];
-        Glava19.zadanie_19_10(array);
+        Glava19.zadanie_19_14(array);
+        WtF.letsSaveIt(array);
+
 
 
 

@@ -1,5 +1,8 @@
 package BookKannnel.Razdel1.Razdel19;
 
+import Tools.Tool2;
+
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Random;
 
@@ -43,15 +46,10 @@ public class Glava19 {
 
         for (int i = 0; i<arr.length;i++){
             int num = rnd.nextInt(10,99);
-            while (num%3!=1){
-                System.out.println(num);
-                if(num%3==1){
-                    arr[i]=num;
-                }
+            while (num%3!=1 || num==0){
                 num = rnd.nextInt(10,99);
             }
-
-         //   arr[i] = num;
+            arr[i] = num;
         }
         System.out.println(Arrays.toString(arr));
 //Работает но не корректно если число не попало под условие записывает 0
@@ -60,10 +58,77 @@ public class Glava19 {
         /*Метод который получает в качестве параметра массив и
         заполняет его положительными случайными двузначными числами
          у каждой из которых цифра десятков равна цифре едениц*/
+        for(int i = 0;i<arr.length;i++){
+            int rnd_num = rnd.nextInt(10,99);
+            int num1 = rnd_num/10;
+            int num2 = rnd_num%10;
+            while(num1!=num2){
+                 rnd_num = rnd.nextInt(10,99);
+                 num1 = rnd_num/10;
+                 num2 = rnd_num%10;
+            }
+            arr[i] = rnd_num;
+        }
+        System.out.println(Arrays.toString(arr));
+    }
 
-        //Пример взят из книги
+    public static void zadanie_19_12(int [] arr){
+        /*Метод который получает в качестве параметра массив и заполняет его
+        * положительными случайными двузначными числами, у которых числа десятка больше
+        * чем число едениц*/
+        for (int i = 0; i<arr.length;i++){
+            int random_number = rnd.nextInt(10,99);
+            int num1 = random_number/10;
+            int num2 = random_number%10;
+            while(num1<num2 || num1 == num2){
+                 random_number = rnd.nextInt(10,99);
+                 num1 = random_number/10;
+                 num2 = random_number%10;
+            }
+            arr[i]=random_number;
+        }
+        System.out.println(Arrays.toString(arr));
+    }
 
+    public static void zadanie_19_13(int [] arr){
+        /*Метод который получает в качестве параметра массив и заполняет его положительными
+        * случайными двузначными числами у каждого из которых сумма цифр делится на 9 без остатка*/
+        int [] test_arr = new int[arr.length];
+        for (int i = 0; i<arr.length; i++){
+            int random_number = rnd.nextInt(10,99);
+            int sum = Tool2.sumOfTwoDigits(random_number);
+            while (sum%9 !=0 || sum == 0){
+                 random_number = rnd.nextInt(10,99);
+                 sum = Tool2.sumOfTwoDigits(random_number);
+            }
+            test_arr[i]=random_number;
+            arr[i] = sum;
+        }
+        System.out.println(Arrays.toString(arr));
+        System.out.println("Исходный массив");
+        System.out.println(Arrays.toString(test_arr));
+    }
+    public static void zadanie_19_14(int [] arr){
+        /*Метод который получает в качестве параметра массив
+        * и заполняет его случайными двузначными значениями так,
+        * что бы цифра десятков каждого элемента массива была равна цифре едениц
+        * следующего элемента*/
 
+        for (int i =0; i< arr.length-1; i+=2){
+            int random_num = rnd.nextInt(10,99);
+            int random_num2 = rnd.nextInt(10,99);
+            int num1 = random_num/10;
+            int num2 = random_num2%10;
+            while(num1!=num2){
+                 random_num = rnd.nextInt(10,99);
+                 random_num2 = rnd.nextInt(10,99);
+                 num1 = random_num/10;
+                 num2 = random_num2%10;
+            }
+            arr[i] = random_num;
+            arr[i+1]=random_num2;
+        }
+        System.out.println(Arrays.toString(arr));
     }
 
 }

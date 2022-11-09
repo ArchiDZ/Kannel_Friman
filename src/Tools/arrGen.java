@@ -13,4 +13,13 @@ public class arrGen {
         System.out.println( Arrays.toString(array));
         return array;
     }
+    public static void checkArrafterDelimetr(int [] array_from_19_10){
+        /*Для проверки результата содержимого массива из задачи
+        * Каннель и Фриман глава 19 задача 19.10*/
+
+        for(int i = 0;i<array_from_19_10.length;i++){
+            int remain = array_from_19_10[i]%3;
+            System.out.println(array_from_19_10[i]+" остаток-->"+remain);
+        }
+    }
 }

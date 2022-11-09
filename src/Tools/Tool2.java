@@ -17,4 +17,11 @@ public class Tool2 {
     public int getNum2(){
         return num2;
     }
+
+    public static int sumOfTwoDigits (int numFromArray){
+        int num1 = numFromArray/10;
+        int num2 = numFromArray%10;
+        int result = num1+num2;
+        return result;
+    }
 }
