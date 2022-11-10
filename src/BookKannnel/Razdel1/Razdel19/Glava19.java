@@ -130,5 +130,22 @@ public class Glava19 {
         }
         System.out.println(Arrays.toString(arr));
     }
+    public static void zadanie_19_15(int [] arr,int s){
+        /*Метод который получает в качестве параметра массив и дополнительный параметр S
+        * Метод сначала заполняет четные ячейки массива двузначными значениями
+        * Затем нечетные ячейки заполняет так что бы сумма значений в нечетной и в предыдущей четной
+        * была равна S. Какими условиями должен отвечать параметр S,для того что бы задача имела решение*/
+
+        for (int i = 0;i<arr.length;i+=2){
+            arr[i]=rnd.nextInt(10,99);
+        }
+        for(int i=1;i<arr.length;i+=2){
+            arr[i] = s-arr[i-1];
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+    public static void zadanie_19_16(){
+        /*Метод который получает в качестве параметра массив */
+    }
 
 }

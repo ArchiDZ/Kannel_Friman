@@ -8,12 +8,19 @@ import Tools.arrGen;
 import Zlatpol.Glava1.GL1;
 import experiment.Person;
 
+import java.time.LocalDateTime;
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[]args){
         int [] array = new int[10];
-        Glava19.zadanie_19_14(array);
+        Random rand = new Random();
+        int s = rand.nextInt(1,99);
+        System.out.println("Variable S-->"+s);
+        Glava19.zadanie_19_15(array,s);
         WtF.letsSaveIt(array);
+
 
 
 
