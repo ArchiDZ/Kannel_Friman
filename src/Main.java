@@ -3,6 +3,7 @@ import BookKannnel.Razdel1.Razdel18.Glava18;
 import BookKannnel.Razdel1.Razdel19.Glava19;
 import ExerciseForCoding.Glava1.G1_2;
 import Tools.Choser;
+import Tools.RfF;
 import Tools.WtF;
 import Tools.arrGen;
 import Zlatpol.Glava1.GL1;
@@ -20,7 +21,9 @@ public class Main {
 //        System.out.println("Variable S-->"+s);
 //        Glava19.zadanie_19_15(array,s);
 //        WtF.letsSaveIt(array);
-        Glava18.zadanie_18_17();
+       // Glava18.zadanie_18_17();
+
+        RfF.readFromCsv();
 
 
 
