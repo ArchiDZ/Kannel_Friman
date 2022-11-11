@@ -218,6 +218,68 @@ public class Glava18 {
          * размер массива задается с клавиатуры и выводится на экран следующим образом:
          * -в первой строке - четные значения элементов массива
          * --во второй строке - значения  нечетных элементов массива*/
+        System.out.println("Введите размер массива");
+        System.out.print("-->");
+        int arlenth = scn.nextInt();
+        int [] array = new int[arlenth];
+        for(int i = 0;i<array.length;i++){
+            int randomNumber = rnd.nextInt(10,99);
+            array[i] = randomNumber;
+        }
+        for(int i = 0;i<array.length;i++){
+            if(array[i]%2==0){
+                System.out.print(array[i]+" ");
+            }
+        }
+        System.out.println();
+        for(int i=0;i<array.length;i++){
+            if(array[i]%2!=0){
+                System.out.print(array[i]+" ");
+            }
+        }
+        System.out.println();
+        System.out.println(Arrays.toString(array));
+    }
+    public static void zadanie_18_17() {
+        /*Метод который заполняет массив случайными трехзначными значениями.
+         * - Размер массива задается с клавиатуры
+         * после заполнения метод должен вывести на экран значения
+         * массива следующим образом:
+         * В каждой строке выводится паразначений семетрично расположеных друг к другу
+         * если массив имеет не четный размер центральную ячейку вывести отдельно*/
 
+        System.out.println("Введите размер массива");
+        System.out.print("-->");
+        int num = scn.nextInt();//размер массива
+        int[] arr = new int[num];
+        boolean isEven = false;
+        if (num % 2 == 0) {
+            isEven = true;
+
+            for (int i = 0; i < arr.length; i++) {
+                arr[i] = rnd.nextInt(100, 999);
+            }
+            System.out.println(Arrays.toString(arr));
+            for (int i = 0, j = arr.length - 1; i < arr.length && j > 0; i++, j--) {
+                System.out.print(arr[i] + " ");
+                System.out.println(arr[j]);
+                if (j == arr.length / 2) {
+                    break;
+                }
+            }
+        } else if (isEven == false) {
+            for (int i = 0; i < arr.length; i++) {
+                arr[i] = rnd.nextInt(100, 999);
+            }
+            System.out.println(Arrays.toString(arr));
+            for (int i = 0, j = arr.length - 1; i < arr.length && j > 0; i++, j--) {
+                while (j != (arr.length / 2)-1) {
+                    System.out.print(arr[i] + " ");
+                    System.out.println(arr[j]);
+                       break;
+                }
+            }
+            System.out.println(arr[(arr.length / 2)]);
+        }
     }
 }

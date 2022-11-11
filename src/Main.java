@@ -14,12 +14,14 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[]args){
-        int [] array = new int[10];
-        Random rand = new Random();
-        int s = rand.nextInt(1,99);
-        System.out.println("Variable S-->"+s);
-        Glava19.zadanie_19_15(array,s);
-        WtF.letsSaveIt(array);
+//        int [] array = new int[10];
+//        Random rand = new Random();
+//        int s = rand.nextInt(1,99);
+//        System.out.println("Variable S-->"+s);
+//        Glava19.zadanie_19_15(array,s);
+//        WtF.letsSaveIt(array);
+        Glava18.zadanie_18_17();
+
 
 
 
