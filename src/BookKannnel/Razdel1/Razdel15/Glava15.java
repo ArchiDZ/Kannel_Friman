@@ -713,7 +713,30 @@ public class Glava15 {
         //while (counter<=maxPeople || peoplewegth<maxWeight){
         //}
     }
-    public static void zadanie_15_47(){}
+    public static void zadanie_15_47(){
+        /*На спектакль в кассу было выделено определенное количество
+        * билетов, и продажа проходит до тех пор пока не были
+        * проданы все билеты. Если покупатель хочет купить определенное
+        * количество билетов а такого количества нет, то ему отказано в
+        * покупке.
+        * Вывести результаты:
+        * 1) какое число покупателей приобрели билеты
+        * 2) скольким клиентом было отказано */
+        int ticket = rnd.nextInt(100,999);
+        System.out.println("Было завезено "+ticket);
+        System.out.println();
+        for(int i = 1;i<1000;i++){
+            int wantBuy = rnd.nextInt(1,10);
+            System.out.println("Клиент № "+i+" хочет купить "+wantBuy+ " бтлетов");
+           ticket-=wantBuy;
+           if(ticket<wantBuy){
+               break;
+               // System.out.println("В кассе оствлось "+ticket);
+           }
+            System.out.println("Билетов осталось-->"+ticket);
+        }
+
+    }
     public static void zadanie_15_48(){}
     public static void zadanie_15_49(){}
     public static void zadanie_15_50(){}

@@ -17,8 +17,8 @@
       <scope value="GLOBAL" />
       <destination value="FILE" />
       <format value="EXCEL" />
-      <charset value="windows-1251" />
-      <charset value="windows-1251" />
+      <charset value="UTF-8" />
+      <charset value="UTF-8" />
     </export-instructions>
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
@@ -29,13 +29,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="8f0ba598-90ac-482a-ab32-acc47a1ed0ec">
-      <console name="HerokuTestDB" type="STANDARD" schema="public" session="Main"><![CDATA[CREATE TABLE public.PERSONS(pers_id serial primary key,
-pers_name varchar (50),pers_age int);
-
-insert into public.persons
-values (1,'Geralt',142);
-
-select * from public.persons]]></console>
+      <console name="HerokuTestDB" type="STANDARD" schema="" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">

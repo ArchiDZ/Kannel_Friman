@@ -21,9 +21,9 @@ public class Main {
 //        System.out.println("Variable S-->"+s);
 //        Glava19.zadanie_19_15(array,s);
 //        WtF.letsSaveIt(array);
-       // Glava18.zadanie_18_17();
+        Glava15.zadanie_15_47();
 
-        RfF.readFromCsv();
+        //RfF.readFromCsv();
 
 
 

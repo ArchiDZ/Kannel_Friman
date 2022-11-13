@@ -282,4 +282,33 @@ public class Glava18 {
             System.out.println(arr[(arr.length / 2)]);
         }
     }
+    public static void zadanie_18_18(){
+        /*Мктод который заполняет массив случайнными дыузнычными числами
+        * размер задается с клавиатуры
+        * затем метод выводит на экран массив в виде:
+        * 1-ой строке - значения из перваой половины массива
+        * начиная с начала
+        * 2-ой строке - значения из второй половины массива, начиная с конца
+        * */
+        System.out.println("Введите размер массива");
+        System.out.print("-->");
+        int arr_len = scn.nextInt();
+        int [] array = new int[arr_len];
+        for(int i=0;i<array.length;i++){
+            array[i] = rnd.nextInt(10,99);
+        }
+        System.out.println("Итоговый массив");
+        System.out.println(Arrays.toString(array));
+        Delimetr.deleq(25);
+        for(int i = 0;i<array.length/2;i++){
+            System.out.print(array[i]+" ");
+        }
+        System.out.println();
+        for(int i= array.length-1;i>0;i--){
+            System.out.print(array[i]+" ");
+            if(i==array.length/2){
+                break;
+            }
+        }
+    }
 }
