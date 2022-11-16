@@ -212,8 +212,49 @@ public class Glava15 {
         //Реализация не правильная нужно по выводить проверку на количество цифр
         // от туда перекидывать на другой метод
     }
-    public static void zadanie_15_16(){}
-    public static void zadanie_15_17(){}
+    public static void zadanie_15_16(){
+        /*Метод который принимает с клавиатуры целое положительное число
+        * и выводит на экран количество четных цифр в нем и их сумму нечетных.*/
+        System.out.println("Введите число-->");
+        int number = sc.nextInt();
+        int counter = 0;
+        int sum = 0;
+       while (number!=0){
+           int x = number%10;
+           if(x%2==0){
+               counter++;
+           }
+           if(x%2!=0){
+               sum+=x;
+           }
+           number/=10;
+           System.out.print(x+" ");
+       }
+        System.out.println("Четных чисел в числе-->"+counter);
+        System.out.println("Сумма нечетных чисел-->"+sum);
+
+    }
+    public static void zadanie_15_17(){
+        /*Метод который принимает с клавиатуры целое положительное число N
+        * и цифру D. Метод должен проверить, есть ли внутри числа N цифра
+        * D, и вывести на экран соответствующие сообщение.*/
+        System.out.print("Введите число-->");
+        int number = sc.nextInt();
+        int counter = 0;
+        if(number<0 || number>10) {
+            System.out.println(" Не верное значение числа");
+        }
+            int randomNum = rnd.nextInt(10,999);
+            System.out.println("Случайное число-->"+randomNum);
+            while (randomNum!=0){
+                int x = randomNum%10;
+                if(x==number){
+                    System.out.println("Есть совпадение");
+                }
+            }
+
+        }
+
     public static void zadanie_15_18(){
     String s = "Метод который принимает с клавиатуры число и выводит на экран все числа " +
         "которые можно получить из введеного числа путем стирания";
