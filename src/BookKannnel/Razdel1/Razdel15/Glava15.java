@@ -211,50 +211,61 @@ public class Glava15 {
         System.out.println("Кол-во цифр в числе-->" + counter);
         //Реализация не правильная нужно по выводить проверку на количество цифр
         // от туда перекидывать на другой метод
-    }
+    }//полидекса
     public static void zadanie_15_16(){
-        /*Метод который принимает с клавиатуры целое положительное число
-        * и выводит на экран количество четных цифр в нем и их сумму нечетных.*/
-        System.out.println("Введите число-->");
-        int number = sc.nextInt();
-        int counter = 0;
-        int sum = 0;
-       while (number!=0){
-           int x = number%10;
-           if(x%2==0){
-               counter++;
-           }
-           if(x%2!=0){
-               sum+=x;
-           }
-           number/=10;
-           System.out.print(x+" ");
-       }
-        System.out.println("Четных чисел в числе-->"+counter);
-        System.out.println("Сумма нечетных чисел-->"+sum);
-
-    }
-    public static void zadanie_15_17(){
-        /*Метод который принимает с клавиатуры целое положительное число N
-        * и цифру D. Метод должен проверить, есть ли внутри числа N цифра
-        * D, и вывести на экран соответствующие сообщение.*/
+        /*Метод который принимает с клавиатуры целое положительное число и
+        * выводит на экран количество его цифр и их сумму*/
         System.out.print("Введите число-->");
         int number = sc.nextInt();
         int counter = 0;
-        if(number<0 || number>10) {
-            System.out.println(" Не верное значение числа");
-        }
-            int randomNum = rnd.nextInt(10,999);
-            System.out.println("Случайное число-->"+randomNum);
-            while (randomNum!=0){
-                int x = randomNum%10;
-                if(x==number){
-                    System.out.println("Есть совпадение");
-                }
+        int tmp = 0;
+        int summ = 0;
+        while (number!=0){
+            tmp = number%10;
+            if (tmp % 2 == 0) {
+                counter++;
             }
-
+            if(tmp%2!=0){
+                summ+=tmp;
+            }
+            number/=10;
+            System.out.print(tmp+" ");
         }
+        System.out.println();
+        System.out.println("Сумма цифр введнного числа-->"+summ);
+        System.out.println("В введнном числе четных цифр -->"+counter);
+    }
+    public static void zadanie_15_17(){
+    /*Метод который принимает с клавиатуры целое положительное число N ицифру D.
+     Метод должен проверить, есть ли внутри введеного числа N цифра D. И вывести
+     и вывести соответсвующие сообщение*/
+        //поправка число N будет генерироваться случайным образом
 
+        int number = rnd.nextInt(100,9999);
+        System.out.println("---"+number+"---");
+        System.out.println("Введите цифру-->");
+        int digit = sc.nextInt();
+        int match = 0, tmp = 0;
+        boolean flag = false;
+        if(digit<0 || digit>10){
+            System.out.println("!!! Число должно быть положительное и меньше 10");
+        }
+        while(number!=0){
+            tmp = number%10;
+            if(tmp==digit){
+                match++;
+                flag = true;
+            }
+            System.out.print(tmp+" ");
+            number/=10;
+        }
+        System.out.println();
+        if(flag == true){
+            System.out.println("Есть совпадения по числу");
+            System.out.println("Кол-во совпадений-->"+match);
+        }else
+            System.out.println("Совпадений нет");
+    }
     public static void zadanie_15_18(){
     String s = "Метод который принимает с клавиатуры число и выводит на экран все числа " +
         "которые можно получить из введеного числа путем стирания";
@@ -295,7 +306,28 @@ public class Glava15 {
         }
         System.out.println("Конец цикла--"+sum);
     }
-    public static void zadanie_15_21(){}
+    public static void zadanie_15_21(){
+        /*Метод который принимает с клавиатуры целое положительное значение
+        * Метод должен заменить его на сумму его же цифр и продолжать до тех
+        * пор пока не получиться однозначное число
+        * Все значения которые получились необходимо вывести на экран*/
+        System.out.print("Введите число-->");
+        int number = sc.nextInt();
+        String str = String.valueOf(number);
+        int iter = str.length();
+        int tmp = 0,sum =0;
+        int x=0;
+        while(tmp>0 && tmp<10){
+            x = number%10;
+            sum +=x;
+            number/=10;
+            System.out.println(sum);
+            tmp=sum;
+        }
+
+
+
+    }
     public static void zadanie_15_22(){
         String s = "Метод который выводит 15 положительных чисел. Для каждого числа " +
                 "выдает сумму цифр. Также выводит порядковый номер и самую большую цифру";
