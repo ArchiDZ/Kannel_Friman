@@ -7,6 +7,7 @@ import Tools.RfF;
 import Tools.WtF;
 import Tools.arrGen;
 import Zlatpol.Glava1.GL1;
+import Zlatpol.Glava3.Chapter3;
 import experiment.Person;
 
 import java.time.LocalDateTime;
@@ -21,8 +22,8 @@ public class Main {
 //        System.out.println("Variable S-->"+s);
 //        Glava19.zadanie_19_15(array,s);
 //        WtF.letsSaveIt(array);
-        Glava15.zadanie_15_21();
-
+       // Glava15.zadanie_15_21();
+        Chapter3.zadanie_3_4 ();
         //RfF.readFromCsv();
 
 
