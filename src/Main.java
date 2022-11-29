@@ -7,6 +7,7 @@ import Tools.RfF;
 import Tools.WtF;
 import Tools.arrGen;
 import Zlatpol.Glava1.GL1;
+import Zlatpol.Glava2.Gl2;
 import Zlatpol.Glava3.Chapter3;
 import experiment.Person;
 
@@ -16,34 +17,9 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[]args){
-//        int [] array = new int[10];
-//        Random rand = new Random();
-//        int s = rand.nextInt(1,99);
-//        System.out.println("Variable S-->"+s);
-//        Glava19.zadanie_19_15(array,s);
-//        WtF.letsSaveIt(array);
-       // Glava15.zadanie_15_21();
-        Chapter3.zadanie_3_4 ();
-        //RfF.readFromCsv();
 
 
-
-
-
-
-
-        //Choser.zadanieVibiratel();
-
-
-
-
-
-        //Tool6 foo = new Tool6();
-        //foo.sixDec(123456);
-        //System.out.println(foo.getNum1()+" "+foo.getNum2()+" "
-          //      +foo.getNum3()+" "+foo.getNum4()+" "+foo.getNum5()+" "+foo.getNum6());
-//
-
+        Gl2.z_2_1();
 
 //        int i=123456;
 //        int num00 = i/100000;
@@ -54,16 +30,6 @@ public class Main {
 //        int num4 = i%10;
 //
 //        System.out.println(num00+" "+num0+" "+num1+" "+num2+" "+num3+" "+num4);
-
-
-
-        /*
-        System.getProperties().list(System.out);
-        System.out.println(System.getProperty("user.name"));
-        System.out.println("================================================");
-        System.out.println(
-        System.getProperty("java.library.path"));
-    */
 
     }
 }
