@@ -19,7 +19,7 @@ public class Main {
     public static void main(String[]args){
 
 
-        Gl2.z_2_1();
+        Gl2.z_2_13();
 
 //        int i=123456;
 //        int num00 = i/100000;
