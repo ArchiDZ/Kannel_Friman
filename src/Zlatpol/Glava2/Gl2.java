@@ -133,6 +133,14 @@ public class Gl2 {
         System.out.println("Х="+x);
     }
     public static void z_2_14(){
+    /*Даны катеты прямоугольного треугольника найти гипотенузу*/
+        int katet1 = rnd.nextInt(1,25);
+        int katet2 = rnd.nextInt(1,25);
+        int gipotenuza = (int)(Math.pow(katet1,2)+Math.pow(katet2,2));
+        int result = (int)Math.sqrt(gipotenuza);
+        System.out.println("Катет а-->"+katet1+" Катет б-->"+katet2+" Гипотенуза-->"+result);
+    }
+    public static void z_2_15(){
 
     }
 
