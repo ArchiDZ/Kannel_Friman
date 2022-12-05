@@ -141,9 +141,27 @@ public class Gl2 {
         System.out.println("Катет а-->"+katet1+" Катет б-->"+katet2+" Гипотенуза-->"+result);
     }
     public static void z_2_15(){
+    /*Найти площадь кольца по заданным внешнему и внутреннему радиусу*/
+        double pi = 3.14;
+        double vnesh_R = rnd.nextDouble(1.0,25.0);
+        double vnutr_R = rnd.nextDouble(5.0,25.0);
+        System.out.println("-->"+vnesh_R+" -->"+vnutr_R);
+        double plo_vnes = pi*(Math.pow(vnesh_R,2));
+        double plo_vnut = pi*(Math.pow(vnutr_R,2));
+        System.out.println("Площадь по внешнему радиусу-->"+plo_vnes+" Площадь по внутриннему радиусу-->"+plo_vnut);
+    }
+    public static void z_2_16(){
+        /*Даны катеты прямоугольного треугольника.Найти его периметр*/
+        double a = rnd.nextDouble(1.0,25.0);
+        double b = rnd.nextDouble(1.0, 25.0);
+        double P = 2*a+b;
+        System.out.println("Сторона а-->"+a+" Сторона б-->"+b+" Периметр-->"+P);
+    }
+    public static void z_2_17(){
+        /*Даны основания ивысота равнобедренной трапеции найти ее периметр*/
+
 
     }
-
 
     public static double z_2_31(int kon, int apl){
         double kon_price = 75.85;
@@ -170,7 +188,20 @@ public class Gl2 {
     }
 
     public static void zadacha_2_36(){
-
+    /*Известно значение температуры по шкале Цельсия.Найти соответствующее значение
+    * температуры по шкале:
+    * -Кельвина
+    * -Фаренгета
+    * Для перерасчета по шкале фаренгейта необходимо исходное значение температуры
+    * умножить на 1.8 и к результату прибавить 32.
+    * А по шкале Кельвина абсолютное значение нуля  соответсвует -237.15 градуса по шкале Цельсия
+    * */
+        System.out.println("Цельсий "+" Кельвин "+" Фаренгейт");
+      for(int i = 0;i<=10;i++){
+          double kelvin =i+273.15;
+          double farengeit = (i*1.8)+32;
+          System.out.println(i+"   "+kelvin+"    "+farengeit);
+      }
     }
 
 }
