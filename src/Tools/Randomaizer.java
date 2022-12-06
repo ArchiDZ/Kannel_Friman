@@ -2,6 +2,9 @@ package Tools;
 
 import java.util.Random;
 
+/**
+ * Не самый удачный вариант для выборки случайной задачи.
+ */
 public class Randomaizer {
     public static void main(String[] args) {
         Random rnd = new Random();

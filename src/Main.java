@@ -1,6 +1,7 @@
 import BookKannnel.Razdel1.Razdel15.Glava15;
 import BookKannnel.Razdel1.Razdel18.Glava18;
 import BookKannnel.Razdel1.Razdel19.Glava19;
+import BookKannnel.Razdel1.Razdel9.Glava9;
 import ExerciseForCoding.Glava1.G1_2;
 import Tools.Choser;
 import Tools.RfF;
@@ -19,7 +20,7 @@ public class Main {
     public static void main(String[]args){
 
 
-        Gl2.zadacha_2_36();
+        Glava9.zadanie_9_15();
 
 //        int i=123456;
 //        int num00 = i/100000;

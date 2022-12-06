@@ -1,5 +1,8 @@
 package BookKannnel.Razdel1.Razdel9;
 
+import Tools.Tool3;
+import Tools.Tool6;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -102,6 +105,227 @@ static Scanner input = new Scanner(System.in);
        if (a==90 || b==90){
            System.out.println("Прямоугольный треугольник");
        }
+   }
+   public static void zadanie_9_8(){
+       /*Счастливый 6-значный билет,если сумма первых трех его цифр равна сумме последних трех цифр
+       * и обе суммы являются четными.*/
+       int ticket = rnd.nextInt(100000,999999);
+       System.out.println("Билет с номером "+ticket);
+       Tool6 tl = new Tool6();
+       tl.sixDec(ticket);
+       int summ1 = tl.getNum1()+ tl.getNum2()+ tl.getNum3();
+       int summ2 = tl.getNum4()+tl.getNum5()+ tl.getNum6();
+        if (summ1 == summ2 && summ1%2==0){
+            System.out.println("Поздравляю счастливый билет найден");
+        }
+       System.out.println(summ1+"  "+summ2);
+   }
+   public static void zadanie_9_9(){
+       /*Метод который принимает с клавиатуры коэффициенты А и В линейного уровнения
+       * (уравнение первой степени ax+b=0)и решает его. То есть выводит на экран корень
+       * (корни) уравнения, или соответсвующее смыслу текстовое сообщение*/
+       //пример из книги c некоторыми изменениями
+
+       int a = rnd.nextInt(-100,100);
+       int b = rnd.nextInt(-100,100);
+       System.out.println("a="+a+" b="+b);
+       if (a==0 && b==0){
+           System.out.println("Бесконечное множество решений");
+       }
+       if(a==0 && b!=0){
+           System.out.println("Нет решений");
+       }
+       if(1!=0){
+           System.out.println(-b/a);
+       }
+   }
+   public static void zadanie_9_10(){
+       /*Метод который принимает с клавиатуры три целых числа и определяет,
+       * в каких соотношениях с точки зрения они находятся( больше, меньше или равно)
+       * На экран следует вывести сообщение с точным указанием результатов проверки*/
+       //Поправка числа генерируются случайным образом
+       int num1 = rnd.nextInt(-100,100);
+       int num2 = rnd.nextInt(-100,100);
+       int num3 = rnd.nextInt(-100,100);
+       System.out.println("Число_1-->"+num1+" Число_2-->"+num2+" Число_3-->"+num3);
+       if(num1>num2){
+           System.out.println("Число_1 больше чем число_2");
+       }
+       if(num1>num3){
+           System.out.println("Число_1 больше чем число_3");
+       }
+       if (num1==num2){
+           System.out.println("Число_1 равно числу_2");
+       }
+       if (num1 == num3){
+           System.out.println("Число_1 равно числу_3");
+       }
+        if(num2==num3){
+            System.out.println("Число_2 равно числу_3");
+        }
+        if(num2>num1){
+            System.out.println("Число_2 больше числа_1");
+        }
+        if(num2>num3){
+            System.out.println("Число_2 больше числа_3");
+        }
+        if (num3>num1){
+            System.out.println("Число_3 больше числа_1");
+        }
+        if(num3>num2){
+            System.out.println("Число_3 больше числа_2");
+        }
+   }
+   public static void zadanie_9_11(){
+       /*Число является плосским, если оно составлено из одинаковых цифр.
+       * Метод который проверяет является ли число плосским*/
+
+       int number = rnd.nextInt(100,999);
+       System.out.println(number);
+       Tool3 tl = new Tool3();
+       tl.threeDec(number);
+       if(tl.getNum1() == tl.getNum2() && tl.getNum2()==tl.getNum3()){
+           System.out.println("Вы нашли плоское число");
+       }
+   }
+
+   public static void zadanie_9_12(){
+       /*Трехзначное число называется поднимающиемся ,
+       * если оно составлено из цифр, расположенных в порядке возрастания
+       * Метод который принимает с клавиатуры трехзначное число и проверяет является ли оно возрастающим
+       * */
+        int number = rnd.nextInt(99,999);
+       System.out.println(number);
+        Tool3 tl = new Tool3();
+        tl.threeDec(number);
+        if(tl.getNum1()<tl.getNum2() && tl.getNum2()<tl.getNum3()){
+            System.out.println("Поднимающиеся число");
+        }else System.out.println("Число обычное");
+   }
+   public static void zadanie_9_13(){
+       /*Трехзначное число называется "Опускающимся",
+        * если оно составлено из цифр, расположенных в порядке убывания
+        * Метод который принимает с клавиатуры трехзначное число и проверяет является ли оно возрастающим
+        * */
+       int number = rnd.nextInt(99,999);
+       System.out.println(number);
+       Tool3 tl = new Tool3();
+       tl.threeDec(number);
+       if(tl.getNum1()>tl.getNum2() && tl.getNum2()>tl.getNum3()){
+           System.out.println("Опускающиеся число");
+       }else System.out.println("Число обычное");
+   }
+   public static void zadanie_9_14(){
+       /*Определим "Текстовую форму оценки следующим образом: 1 или 2 Неудовлетворительно
+       * 3 - Удовлетворительно, 4 - хорошо, 5 - Отлично.
+       * Метод который принимает с клавиатуры число и выводит соответсвующие сообщение на экран*/
+       System.out.println("Введите оценку");
+       int mark = input.nextInt();
+       switch (mark){
+           case 1:
+               System.out.println("Неудовлетворительно");
+               break;
+           case 2:
+               System.out.println("Неудовлетворительно");
+               break;
+           case 3:
+               System.out.println("Удовлетварительно");
+               break;
+           case 4:
+               System.out.println("Хорошо");
+               break;
+           case 5:
+               System.out.println("Отлично");
+               break;
+       }
+       if(mark>5){
+           System.out.println("Оценка не может быть выше 5");
+       }
+       if(mark<1){
+           System.out.println("Оценка не может быть ниже 1");
+       }
+   }
+   public static void zadanie_9_15(){
+       /* Метод который принимает с клавиатуры число которое должно означать порядковый номер месяца
+       * Если номер соответсвует порядковому номеру месяца,далее следует вывест сезон к которому относится месяц*/
+       System.out.println("Введите число месяца");
+       int number = input.nextInt();
+       String month = "";
+       String season = "";
+       if(number>12){
+           System.out.println("Число месяца не может быть больше 12");
+       }
+       if(number<1){
+           System.out.println("Число месяца не может быть меньше 1");
+       }
+       switch (number){
+           case 1:
+               month = "Январь";
+               break;
+           case 2:
+               month = "Февраль";
+               break;
+           case 3:
+               month = "Март";
+               break;
+           case 4:
+               month = "Апрель";
+               break;
+           case 5:
+               month = "Май";
+               break;
+           case 6:
+               month = "Июнь";
+               break;
+           case 7:
+               month = "Июль";
+               break;
+           case 8:
+               month = "Август";
+               break;
+           case 9:
+               month = "Сентябрь";
+               break;
+           case 10:
+               month = "Октябрь";
+               break;
+           case 11:
+               month = "Ноябрь";
+               break;
+           case 12:
+               month = "Декабрь";
+               break;
+       }
+       if(month.equals("Декабрь") || month.equals("Январь")
+               || month.equals("Февраль")){
+           season = "Зима";
+       }
+       if(month.equals("Март") || month.equals("Апрель") || month.equals("Май")){
+           season = "Весна";
+       }
+       if(month.equals("Июнь") || month.equals("Июль") || month.equals("Август")){
+           season = "Лето";
+       }
+       if(month.equals("Сентябрь") || month.equals("Октябрь") || month.equals("Ноябрь")){
+           season = "Осень";
+       }
+       System.out.println(number+" -->"+month+" "+season);
+   }
+   public static void zadanie_9_16(){
+       /**
+        * Определим следующие периоды суток:
+        * -Утро с 6(включая) до 10(невключая)
+        * -День с 10 (не включая) до 18 (включая)
+        * -Вечер с 18 (не включая) до 22 (не включая)
+        * -Ночь с 22 (не включая) до 6 (не включая)
+        *
+        * Метод который принимает с клавиатуры целое число,
+        * которое должно указывать на определенный час в сутках
+        * и выводит на экран сообщение, к какому периоду в сутках этот
+        * час относится. В случае если введеное значение не позволяет
+        * выполнить указанное действие, следует вывести на экран
+        * соответсвующие сообщение
+        */
    }
 
 }
