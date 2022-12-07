@@ -326,6 +326,103 @@ static Scanner input = new Scanner(System.in);
         * выполнить указанное действие, следует вывести на экран
         * соответсвующие сообщение
         */
+       // int hour = input.nextInt();
+       for(int hour = 1; hour<24;hour++) {
+           if (hour > 24 || hour < 1) {
+               System.out.println("Недопустимое время");
+           }
+           if (hour >= 6 && hour < 10) {
+               System.out.println("Утро");
+           }
+           if (hour > 10 && hour <= 18) {
+               System.out.println("День");
+           }
+           if (hour > 18 && hour < 22) {
+               System.out.println("Вечер");
+           }
+           if (hour > 22 && hour <= 24) {
+               System.out.println("Ночь");
+           }
+           if (hour >= 1 && hour < 6) {
+               System.out.println("Ночь");
+           }
+           System.out.println("--="+hour+"=--");
+       }
+   }
+   public static void zadanie_9_17(){
+    /*Метод который принимает с клавиатуры три числа и проверяет, является ли
+    * ли эти числа углами одного и тогоже треугольника
+    * По результатам проверки необходимо вывести сообщение*/
+
+       int a = rnd.nextInt(1,180);
+       int b = rnd.nextInt(1,180);
+       int c = rnd.nextInt(1,180);
+       int summ = a+b+c;
+       System.out.println(a+" "+b+" "+c);
+       if (summ == 180){
+           System.out.println("Три угла принадлежат к одному треугольнику");
+       }
+       if (summ<180){
+           System.out.println("Улы не принадлежат к 1 треугольнику");
+       }
+       if(summ>180){
+           System.out.println("Это не треугольник");
+       }
+   }
+   public static void zadanie_9_18(){
+       /*Метод который принимает с клавиатуры три числа и проверяет
+       * являтся ли эти числа длинами сторон одного и того же треугольника.
+       * По результатам проверки необходимо вывести соответствующие
+       * сообщение*/
+       int a = rnd.nextInt(1,100);
+       int b = rnd.nextInt(1,100);
+       int c = rnd.nextInt(1,100);
+       String triagle = "";
+       System.out.println("a="+a+" b="+b+" c="+c);
+       if(a==b && a!=c && b!=c){
+           triagle="Равнобедренный треугольник";
+       }
+       if(a==b && b==c && c==a){
+           triagle = "Равносторонний треугольний";
+       }
+       if (a!=b && b!=c && c!=a){
+           triagle = "Разносторонний треугольник";
+       }
+       System.out.println(triagle);
+   }
+   public static void zadanie_9_19(){
+       /*Метод который принимает два положительных числа,
+       * которые могут быть длинами смежных сторон квадрата
+       * или прямоугольника. Метод должен определить к каакой фигуре
+       * относятся данные стороны*/
+       int a = rnd.nextInt(2,25);
+       int b = rnd.nextInt(2,25);
+       String result = "";
+       System.out.println("a="+a+" b="+b);
+       if(a==b){
+           result = "Квадрат";
+       }
+       if(a!=b){
+           result = "Прямоугольник";
+       }
+       System.out.println(result);
+   }
+   public static void zadanie_9_20(){
+      /*Метод который принимает с клавиатуры временной интервал
+      * выраженный в секундах, и выводит на экран тот же интервал только
+      * в часах,минутах,секундах
+      * Если промежуток превышает сутки,то вывести сообщение о том что
+      * рассчеты не производятся*/
+       System.out.print("Введите временной интервал-->");
+       int time = input.nextInt();
+       int min = time/60;
+       int sec = time%60;
+       int hour = 0;
+       if(min >= 60){
+           min = 0;
+           hour++;
+       }
+       System.out.println(hour+" час "+min+" мин "+sec+" сек");
    }
 
 }
