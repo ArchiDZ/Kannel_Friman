@@ -20,7 +20,7 @@ public class Main {
     public static void main(String[]args){
 
 
-        Glava9.zadanie_9_20();
+        Glava9.zadanie_9_22();
 
 //        int i=123456;
 //        int num00 = i/100000;
