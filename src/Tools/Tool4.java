@@ -5,6 +5,7 @@ public class Tool4 {
     private int num2;
     private int num3;
     private int num4;
+    private int centrNumber ;
 
     public void fourDec(int number){
         //1234
@@ -25,5 +26,10 @@ public class Tool4 {
 
     public int getNum4() {
         return num4;
+    }
+
+    public int getCentralNum(int number){
+        centrNumber = (number%1000)/100;
+        return centrNumber;
     }
 }

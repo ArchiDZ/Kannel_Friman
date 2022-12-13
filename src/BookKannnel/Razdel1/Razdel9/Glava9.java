@@ -1,6 +1,7 @@
 package BookKannnel.Razdel1.Razdel9;
 
 import Tools.Tool3;
+import Tools.Tool4;
 import Tools.Tool6;
 
 import java.util.Random;
@@ -459,8 +460,78 @@ static Scanner input = new Scanner(System.in);
            ost/=10;
        }
        System.out.println("100-->"+tl.getNum1()+" 50-->"+x+" 10-->"+ost);
-
-
+       //не верное решение
    }
+   public static void zadanie_9_23(){
+       /*Целое трехзначное число называется дважды четным если
+       * сумма его цифр и произведение являются четными
+       * Метод который принимает с клавиатуры число и проверяет является число дважды четным
+       * */
+       System.out.print("Введите число-->");
+       int number = input.nextInt();
+       if(number<100 || number>999){
+           System.out.println("Не подходящее число");
+       }
+       Tool3 tl = new Tool3();
+       tl.threeDec(number);
+       int num1 = tl.getNum1()+ tl.getNum2()+tl.getNum3();
+       int num2 = tl.getNum1()* tl.getNum2()*tl.getNum3();
+       if(num1%2==0 && num2%2==0){
+           System.out.println("!!!Внимание!!! \n"+"Дважды четное число");
+       }
+       else
+           System.out.println("Обычное число");
+   }
+   public static void zadanie_9_24(){
+       /*Целое трехзначное число называется горой если, его средняя цифра больше крайних
+       * Метод который принимает с клавиатуры положительное трех значное число, и проверяет
+       * является ли оно горой*/
+       System.out.print("Введите число_");
+       int number = input.nextInt();
+       if(number<0 || number<100 || number>999){
+           System.out.println("!!!Внимание!!!\n Недопустимое число!");
+       }
+       Tool3 tl = new Tool3();
+       tl.threeDec(number);
+       if(tl.getNum2()>tl.getNum1() && tl.getNum2()>tl.getNum3()){
+           System.out.println("Данное число является горой!");
+       } else System.out.println("Обычное число");
+   }
+   public static void zadanie_9_25(){
+       /*Целое трехзначное число называется ямой, если средняя цифра меньше крайних.
+       * Метод который принимает с клавиатуры число и проверяет является ли оно ямой*/
+       System.out.println("Введите число_");
+       int number = input.nextInt();
+       if(number<0 || number<100 || number>999){
+           System.out.println("!!!Внимание!!!\n Недопустимое число!");
+       }
+       Tool3 tl = new Tool3();
+       tl.threeDec(number);
+       if(tl.getNum2()<tl.getNum1() && tl.getNum2()<tl.getNum3()){
+           System.out.println("Данное число является ЯМОЙ!");
+       } else System.out.println("Обычное число");
+   }
+   public static void zadanie_9_26(){
+       /*Метод который принимает с клавиатуры 2 числа положительное двузначное
+       * и четырезначное, и проверяет является ли двузначное число внутринним по
+       * отношению к четырехзначному*/
+       System.out.print("Ведите двузначное число_");
+       int twoDigitNumber = input.nextInt();
+       if(twoDigitNumber<9 || twoDigitNumber>99){
+           System.out.println("Внимание!!! \nНедопустимое значение числа");
+       }
+       System.out.println("");
+       System.out.print("Ведите четырехзначное число_");
+       int fourDigitNumber = input.nextInt();
+       if(fourDigitNumber<1000 || fourDigitNumber>9999){
+           System.out.println("Внимание!!! \nНедопустимое значение числа");
+       }
+       Tool4 tl = new Tool4();
+       int cenNum = tl.getCentralNum(fourDigitNumber);
+       if(cenNum==twoDigitNumber){
+           System.out.println("Внутриннее число");
+       }
+   }
+
 
 }

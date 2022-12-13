@@ -1,26 +1,11 @@
-import BookKannnel.Razdel1.Razdel15.Glava15;
-import BookKannnel.Razdel1.Razdel18.Glava18;
-import BookKannnel.Razdel1.Razdel19.Glava19;
 import BookKannnel.Razdel1.Razdel9.Glava9;
-import ExerciseForCoding.Glava1.G1_2;
-import Tools.Choser;
-import Tools.RfF;
-import Tools.WtF;
-import Tools.arrGen;
-import Zlatpol.Glava1.GL1;
-import Zlatpol.Glava2.Gl2;
-import Zlatpol.Glava3.Chapter3;
-import experiment.Person;
-
-import java.time.LocalDateTime;
-import java.util.Random;
+import Zlatpol.Glava3.GL3;
 
 public class Main {
 
     public static void main(String[]args){
 
-
-        Glava9.zadanie_9_22();
+        Glava9.zadanie_9_26();
 
 //        int i=123456;
 //        int num00 = i/100000;

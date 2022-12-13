@@ -3,7 +3,7 @@ package Zlatpol.Glava3;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Chapter3 {
+public class GL3 {
     static Random rnd =new Random();
     static Scanner scn = new Scanner(System.in);
 
@@ -43,6 +43,46 @@ public class Chapter3 {
     public static void zadanie_3_5(){
         /*Дан прямоугольник 543х130 см сколько квадратов можно нарезать
         * из данного прямоугольника*/
-
+            int a = 543/130;
+        System.out.println(a);
+    }
+    public static void z_3_6(){
+        /*В купейном вагоне имеется 9 купе с 4 местами для пассажиров в каждом.
+        * Определить номер купе, в котором находиться место с заданным номером
+        * (нумерация мест сквозная, начинается с 1)*/
+        int mesto = 0;
+        for (int i=1;i<=9;i++){
+            for(int x=1;x<=4;x++){
+                mesto++;
+                System.out.print("|Вагон № "+i+". Место"+mesto+"| ");
+            }
+            System.out.println();
+        }
+    }
+    public static void z_3_7(){
+        /*В подьезде №1 пяти этажного жилого дома 15 квартир. определить на
+        каком этаже находиться квартира с заданным номером*/
+        int kvartira = 0;
+        for(int i =1;i<=5;i++){
+            System.out.print(i+".");
+            for (int x = 1;x<4;x++){
+                kvartira++;
+                System.out.print(" |"+kvartira+"| ");
+            }
+            System.out.println();
+        }
+    }
+    public static void z_3_8(){
+        /*В кинотеатре имеется 20 рядов мест для зрителей в каждом
+        * и которых располодено 15 кресел. Билет имеет серию
+        * АВ и номер билета, для первого места в первом ряду равного 01643
+        * (Далее этот номер увеличивается согласно условному обозначению мест. Имеющий вид,
+        *  показанный в таблице ниже
+        *
+        * |1|2|...|15|
+        * 16|17|..|30|
+        * |..|..|..|..|
+        * |286|287|..|300|
+        * */
     }
 }
