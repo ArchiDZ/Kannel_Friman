@@ -84,5 +84,16 @@ public class GL3 {
         * |..|..|..|..|
         * |286|287|..|300|
         * */
+        int ticket = 01643;
+        int m = 0;
+        for(int i = 1;i<21;i++){
+            System.out.print(i+".|");
+            for (int z=1;z<16;z++){
+                m++;
+                ticket++;
+                System.out.print(m+"(AB"+ticket+")"+" ");
+            }
+            System.out.println();
+        }
     }
 }

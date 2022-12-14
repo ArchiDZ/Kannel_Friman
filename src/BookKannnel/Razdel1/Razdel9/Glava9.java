@@ -532,6 +532,23 @@ static Scanner input = new Scanner(System.in);
            System.out.println("Внутриннее число");
        }
    }
+   public static void zadanie_9_27(){
+       /*Метод который принимает с клавиатуры два положительных числа - двузначное
+       и четырехзначное и проверяет, сколько раз двузначное число фигурирует как
+       внутринее по отношению к четырехзначному */
+       System.out.println("Введите двузначное число");
+       int twoDecNumber = input.nextInt();
+       if(twoDecNumber<9 || twoDecNumber>99){
+           System.out.println("Внимание!!! \nНедопустимое значение числа");
+       }
+       System.out.println("Введите четырехзначное число");
+       int fourDecNumber = input.nextInt();
+       if(fourDecNumber<1000 || fourDecNumber>9999){
+           System.out.println("Внимание!!! \nНедопустимое значение числа");
+       }
+
+
+   }
 
 
 }

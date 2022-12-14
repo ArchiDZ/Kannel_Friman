@@ -5,7 +5,12 @@ public class Main {
 
     public static void main(String[]args){
 
-        Glava9.zadanie_9_26();
+        //GL3.z_3_8();
+        int i = 1;
+        while(i<=1000000){
+            i++;
+        }
+        System.out.println(i);
 
 //        int i=123456;
 //        int num00 = i/100000;
